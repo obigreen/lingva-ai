@@ -8,8 +8,7 @@ const TextWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    gap: 100px;
+    gap: 50px;
 
     @media ${theme.media.tablet} {
         gap: 80px;
@@ -24,20 +23,25 @@ const RusWord = styled.p`
     ${font({weight: 600, maxW: 20, minW: 15})};
     font-style: normal;
     width: 50%;
-
-    
+    height: 67px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
 `
 const EngWord = styled.p`
-
     ${font({weight: 600, maxW: 20, minW: 15})};
     font-style: normal;
     width: 50%;
-    text-align: end;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
 `
 
 const Input = styled.input`
-    max-width: 400px;
-    width: 100%;
+    width: 50%;
+    max-width: 100%;
     border: none;
     padding: 20px;
     font-weight: 400;

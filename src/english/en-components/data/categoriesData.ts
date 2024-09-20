@@ -1,5 +1,4 @@
 export const categoriesData = {
-    //A
     adjectives: [
         {eng: 'old', rus: 'старый'},
         {eng: 'busy', rus: 'занятый'},

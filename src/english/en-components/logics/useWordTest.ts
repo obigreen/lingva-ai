@@ -21,21 +21,24 @@ export const useWord = (questions: { eng: string; rus: string }[]) => {
     };
 
     // Удаление символов и приведение к нижнему регистру
-    const normalizeString = (str: string) => {
-        const withoutBrackets = str.replace(/\(.*?\)/g, ''); // Удаляем скобки
-        return withoutBrackets.replace(/[^a-zа-яё\s]/gi, '').toLowerCase().trim(); // Удаляем знаки и приводим к нижнему регистру
-    };
+    // const normalizeString = (str: string) => {
+    //     const withoutBrackets = str.replace(/\(.*?\)/g, ''); // Удаляем скобки
+    //     return withoutBrackets.replace(/[^a-zа-яё\s]/gi, '').toLowerCase().trim(); // Удаляем знаки и приводим к нижнему регистру
+    // };
+
 
     // Просто принимаем любой ввод и считаем его правильным
-    const handleCheckTranslation = () => {
-        setIsCorrect(true);
-    };
+    // пока временно убрал так как нет логики в том, что бы в функции проверки делать всегда true, буду прокачивать проверку
+    // !handleCheckTranslation - логика относится к проверке (ее пока нет)!
+    // const handleCheckTranslation = () => {
+    //     setIsCorrect(true);
+    // };
 
     // Обработка нажатия клавиши Enter
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'Enter' && !isCorrect) {
-                handleCheckTranslation();
+                setIsCorrect(true);
             }
         };
 
@@ -55,7 +58,7 @@ export const useWord = (questions: { eng: string; rus: string }[]) => {
         setInputValue,
         isCorrect,
         handleNextWord,
-        handleCheckTranslation
+        // handleCheckTranslation - функция проверки (ее пока нет)
     };
 };
 

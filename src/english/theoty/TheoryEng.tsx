@@ -1,5 +1,5 @@
 import React from 'react';
-import {Article, Text, TypeTitle} from "../../styles/BlockStyles";
+import {Article, TypeTitle, WordsBlock} from "../../styles/BlockStyles";
 import { S } from './Theory_Styles';
 
 
@@ -7,16 +7,12 @@ type PropsType = {
     title: string
 }
 
-
-
-
 export const TheoryEng = ({title}: PropsType) => {
 
     return (
-        <Article>
+        <WordsBlock>
             <TypeTitle>{title}</TypeTitle>
-            <Text>
-                {/*do and make*/}
+            <Article>
                 <S.Section>
                     <S.ParagraphTitle>Разница между <S.Marker>do</S.Marker> и <S.Marker>make</S.Marker></S.ParagraphTitle>
 
@@ -290,8 +286,8 @@ export const TheoryEng = ({title}: PropsType) => {
                     </S.Section>
                 </S.Section>
 
-            </Text>
-        </Article>
+            </Article>
+        </WordsBlock>
     );
 };
 
