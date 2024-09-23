@@ -5,10 +5,13 @@ export const WordsBlock = styled.div`
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
 `
 
 export const Article = styled.article`
     position: relative;
+    width: 100%;
+    max-width: 100%;
     padding: 15px;
     border-radius: 12px;
     background-color: #f7f7f7;
@@ -37,14 +40,16 @@ const Main = styled.main`
     min-height: 100vh; /* Заставляем main быть минимум высотой в экран */
 `
 
-const Container = styled.div`
+const GlobalWrapper = styled.div`
     grid-row: 2; /* Контейнер находится на второй строке грида (в центре) */
     position: relative;
+
+`
+const Container = styled.div`
     max-width: 1140px;
     width: 100%;
-    height: 100%;
-    padding: 40px 15px;
     margin: 0 auto;
+    padding: 120px 0 100px 0;
     background-color: #2a2d30;
 `
 
@@ -55,6 +60,7 @@ const MainTitle = styled.h1`
     font-size: 32px;
     font-style: normal;
     color: white;
+    padding: 0 15px;
 `
 const NoteBlock = styled.section`
     width: 100%;
@@ -65,5 +71,5 @@ const NoteBlock = styled.section`
 
 
 export const S = {
-    Main, Container, MainTitle, NoteBlock,
+    Main, GlobalWrapper, Container, MainTitle, NoteBlock,
 }

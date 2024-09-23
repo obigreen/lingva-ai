@@ -15,28 +15,39 @@ const TextWrapper = styled.div`
     }
 
     @media ${theme.media.mobile} {
-        gap: 60px;
+        gap: 15px;
     }
 `
 
 const RusWord = styled.p`
     ${font({weight: 600, maxW: 20, minW: 15})};
     font-style: normal;
+    max-width: 100%;
     width: 50%;
-    height: 67px;
+    min-height: 67px;
     display: flex;
     align-items: center;
     padding: 20px;
+    word-break: break-word;
+    @media ${theme.media.mobile} {
+        padding: 5px;
+    }
+
 `
 const EngWord = styled.p`
     ${font({weight: 600, maxW: 20, minW: 15})};
     font-style: normal;
+    max-width: 100%;
     width: 50%;
-    height: 67px;
+    min-height: 67px;
     display: flex;
     align-items: center;
-    justify-content: end;
     padding: 20px;
+    text-align: start;
+    word-break: break-word;
+    @media ${theme.media.mobile} {
+        padding: 5px;
+    }
 `
 
 const Input = styled.input`

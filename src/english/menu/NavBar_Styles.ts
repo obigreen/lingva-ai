@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-const Header = styled.header`
+const HeaderNav = styled.header`
     display: flex;
     margin: 0 auto 50px auto;
     justify-content: center;
     max-width: 900px;
+    padding: 0 15px;
 `
 
 const Nav = styled.nav`
@@ -39,5 +40,5 @@ const Li = styled.li`
 `
 
 export const S = {
-    Header, Nav, Ul, Li
+    HeaderNav, Nav, Ul, Li
 }

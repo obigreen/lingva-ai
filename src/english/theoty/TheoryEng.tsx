@@ -274,6 +274,7 @@ export const TheoryEng = ({title}: PropsType) => {
                         </S.NoteUl>
                     </S.Section>
                 </S.Section>
+                {/*Ударения*/}
                 <S.Section>
                     <S.ParagraphTitle>
                         <S.Marker>Ударение на слово из <S.Marker>2ух</S.Marker> частей</S.Marker>
@@ -283,6 +284,23 @@ export const TheoryEng = ({title}: PropsType) => {
                         <S.TextP>Если слово состоит из <S.Marker>2ух</S.Marker> частей</S.TextP>
                         <S.TextP><S.Marker>Например - </S.Marker>Sunglasses</S.TextP>
                         <S.TextP>Ударение ставим на <S.Marker>1ую</S.Marker> часть</S.TextP>
+                    </S.Section>
+                </S.Section>
+                {/*Подлежащее/сказуемое/прилагательные*/}
+                <S.Section>
+                    <S.ParagraphTitle>
+                        <S.Marker>Подлежащее/сказуемое/прилагательные</S.Marker>
+                    </S.ParagraphTitle>
+
+                    <S.Section>
+                        <S.TextP>В английском предложении порядок слов, как правило, строгий: всегда сначала идет <S.Marker>подлежащее</S.Marker>, а затем <S.Marker>сказуемое</S.Marker>. Это основа английской грамматики.</S.TextP>
+                        <S.TextP>Также, если перед существительным (подлежащим) стоят прилагательные, то они располагаются перед ним. Например: <S.Marker>a</S.Marker> используется перед прилагательными и существительными в единственном числе, как "a beautiful day".</S.TextP>
+                    </S.Section>
+
+                    <S.Section>
+                        <S.TextP><S.Marker>Пример 1:</S.Marker> The cat (подлежащее) is sleeping (сказуемое).</S.TextP>
+                        <S.TextP><S.Marker>Пример 2:</S.Marker> A big, fluffy cat (a + прилагательные + существительное) is on the couch.</S.TextP>
+                        <S.TextP><S.Marker>Пример 3:</S.Marker> He (подлежащее) runs (сказуемое) every morning.</S.TextP>
                     </S.Section>
                 </S.Section>
 

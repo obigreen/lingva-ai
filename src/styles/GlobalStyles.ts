@@ -29,6 +29,17 @@ export const GlobalStyles = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
+
+    /* Global styles.css */
+    body[data-theme='light'] {
+        --background-color: #2a2d30;
+        --text-color: #fff;
+    }
+
+    body[data-theme='dark'] {
+        --background-color: #fff;
+        --text-color: #000;
+    }
     
 `
 

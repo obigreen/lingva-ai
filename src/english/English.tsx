@@ -10,7 +10,7 @@ export const English = () => {
         <Router>
             <NavBar />
             <Routes>
-                <Route path="/adjectives" element={<Words title={'Adjectives'} key="adjectives" categoryKey="adjectives" />} />
+                <Route path="/adjectives" element={<Words title={'Adjectives'} key="adjectives" categoryKey="arrAdjectives" />} />
                 <Route path="/adverbs" element={<Words title={'Adverbs'} key="arrAdverbs" categoryKey="arrAdverbs" />} />
                 <Route path="/conjunctions" element={<Words title={'Conjunctions and Particle'} key="arrConjunctionsAndParticle" categoryKey="arrConjunctionsAndParticle" />} />
                 <Route path="/day-and-time" element={<Words title={'Day and Time'} key="arrDayAndTime" categoryKey="arrDayAndTime" />} />
@@ -21,6 +21,7 @@ export const English = () => {
                 <Route path="/pronouns" element={<Words title={'Pronouns'} key="arrPronouns" categoryKey="arrPronouns" />} />
                 <Route path="/questions" element={<Words title={'Qestions'} key="arrQestions" categoryKey="arrQestions" />} />
                 <Route path="/verbs" element={<Words title={'Verbs'} key="arrVerbs" categoryKey="arrVerbs" />} />
+                <Route path="/from-video" element={<Words title={'From video'} key="arrFromMyVideo" categoryKey="arrFromMyVideo" />} />
                 <Route path="/theory-eng" element={<TheoryEng title={'Theory'}/>} />
             </Routes>
         </Router>

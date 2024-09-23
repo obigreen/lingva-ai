@@ -54,7 +54,7 @@ export const Words = ({categoryKey, title}: WordListProps) => {
 
                         <FlexWrapper justify={'end'} margin={'20px 0 0 0'}>
                             {!isCorrect ? (
-                                //временная callback заглушка, стояло handleCheckTranslation, функция проверки
+                                //временная callback заглушка, стояло handleCheckTranslation
                                 <Button onClick={()=>{}} title="Проверить"/>
                             ) : (
                                 <Button onClick={handleNextWord} title="Следующее слово"/>

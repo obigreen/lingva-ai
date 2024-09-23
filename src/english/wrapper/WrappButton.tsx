@@ -12,7 +12,7 @@ export const WrappButton = () => {
 
     return (
         <>
-            <Button onClick={handleToggleRectangle}/>
+            <Button onClick={handleToggleRectangle} iconId={'closedWords'}/>
             <Wrapper
                 isVisible={isRectangleVisible}
                 toggleVisibility={() => setIsRectangleVisible(false)}
