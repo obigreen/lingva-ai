@@ -39,6 +39,7 @@ export const categoriesData = {
         {eng: 'expensive', rus: 'дорогой (цена)'},
         {eng: 'cheap', rus: 'дешевый'},
         {eng: 'dirty', rus: 'грязный'},
+        {eng: 'famous', rus: 'знаменитый'},
     ],
     arrAdverbs: [
         { eng: 'near', rus: 'рядом' },
@@ -171,6 +172,7 @@ export const categoriesData = {
         {eng: 'costomers', rus: 'покупатель, клиент'},
         {eng: 'armchair', rus: 'кресло'},
         {eng: 'dirt', rus: 'грязь'},
+        {eng: 'opinion', rus: 'мнение'},
     ],
     arrPhrases: [
         {eng: 'Me too.', rus: 'Я тоже.'},
@@ -235,6 +237,7 @@ export const categoriesData = {
         {eng: "Wait for me", rus: "Подождите меня"},
         {eng: "It runs in my family", rus: "Это у нас семейное"},
         {eng: "Bless you", rus: "Будьте здоровы"},
+        {eng: "in (my, her, his...) opinion", rus: "по (моему, ее, его...) мнению или (я, она, он...) считаю(ет)"},
     ],
     arrPrepositions: [
         { eng: 'for', rus: 'для' },
@@ -295,6 +298,8 @@ export const categoriesData = {
         { eng: 'that', rus: 'тот, та, то' },
         { eng: 'those', rus: 'те' },
         { eng: 'other', rus: 'другой, другие' },
+        { eng: 'somebody', rus: 'кого либо, кто либо' },
+        { eng: 'everybody', rus: 'все, каждый' },
     ],
     arrQestions: [
         {eng: 'What?', rus: 'Что?'},
@@ -364,6 +369,7 @@ export const categoriesData = {
         { eng: 'to change', rus: 'изменения' },
         { eng: 'change', rus: 'изменения' },
         { eng: 'understood', rus: 'понял' },
+        { eng: 'introduce', rus: 'представлять (человека(о знакомстве))' },
     ],
     arrFromMyVideo: [
         { eng: 'Listen', rus: 'слушать' },

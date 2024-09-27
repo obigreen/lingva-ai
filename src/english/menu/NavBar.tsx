@@ -19,7 +19,6 @@ export const NavBar = () => {
                     <S.Li><Link to="/day-and-time">Day and Time</Link></S.Li>
                     <S.Li><Link to="/programming-translate">Programming Language</Link></S.Li>
                     <S.Li><Link to="/from-video">From video</Link></S.Li>
-                    <S.Li><Link to="/theory-eng">Theory Eng</Link></S.Li>
                 </S.Ul>
             </S.Nav>
         </S.HeaderNav>
