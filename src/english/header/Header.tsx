@@ -19,6 +19,7 @@ export const Header = () => {
 
                 <FlexWrapper justify={'center'} align={'center'}>
                     <Icon iconId={'logo'} width="50" height="50" viewBox={"0 0 32 32"}/>
+                    <span>Lingva ai</span>
                 </FlexWrapper>
 
                 <S.HeaderNav>
