@@ -183,7 +183,7 @@ export const categoriesData = {
         {eng: 'meal', rus: 'прием пищи'},
     ],
     arrPhrases: [
-        {eng: 'Me too.', rus: 'Я тоже.'},
+        {eng: 'Me too', rus: 'Я тоже'},
         {eng: 'Much work', rus: 'много работы'},
         {eng: 'Day off', rus: 'выходной день'},
         {eng: 'Did you have a day off on Monday?', rus: 'У тебя был выходной в понедельник?'},

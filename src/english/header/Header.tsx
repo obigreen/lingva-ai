@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Icon} from "../../components/icon/Icon";
 import {S} from "./Header_Styles"
+import Logo from "../../accets/img/logo.svg"
 
 export const Header = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -18,8 +18,9 @@ export const Header = () => {
             <FlexWrapper justify={'space-between'} align={'center'} margin={'0 auto'} padding={'15px'}>
 
                 <FlexWrapper justify={'center'} align={'center'}>
-                    <Icon iconId={'logo'} width="50" height="50" viewBox={"0 0 32 32"}/>
-                    <span>Lingva ai</span>
+                    {/*<Icon iconId={'logo'} width="50" height="50" viewBox={"0 0 32 32"}/>*/}
+                    {/*<S.LogoTitile>Lingva ai</S.LogoTitile>*/}
+                    <S.Logo src={Logo}></S.Logo>
                 </FlexWrapper>
 
                 <S.HeaderNav>

@@ -7,6 +7,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {Button} from "../en-components/button/Button";
 import {categoriesData} from '../en-components/data/categoriesData';
 import {WrappButton} from "../wrapper/WrappButton";
+import {useSwapWords} from "../en-components/logics/useSwapWords";
 
 type WordListProps = {
     categoryKey: keyof typeof categoriesData;
@@ -29,6 +30,8 @@ export const Words = ({categoryKey, title}: WordListProps) => {
         //handleCheckTranslation - функция поверки, проверки временно нет
     } = useWordTest(words);
 
+    const { isSwapped, toggleSwap } = useSwapWords();
+
     // Добавлен эффект для установки фокуса на поле ввода при переходе к следующему слову
     useEffect(() => {
         if (!isCorrect && inputRef.current) {
@@ -44,15 +47,25 @@ export const Words = ({categoryKey, title}: WordListProps) => {
                     <Button onClick={toggleArray} iconId={'random'}/>
                     <Button onClick={toggleMode} iconId={isSingleWordMode ? "back" : "englishWord"}/>
                     <WrappButton />
+                    <Button onClick={toggleSwap} iconId={'arrows'} />
                 </FlexWrapper>
 
                 {isSingleWordMode ? (
                     <div>
                         <S.TextWrapper>
-                            <S.EngWord>{currentWord.eng}</S.EngWord>
-                            {isCorrect ? (
-                                <S.RusWord>{currentWord.rus}</S.RusWord>
+                            {isSwapped ? (
+                                <S.EngWord>{currentWord.rus}</S.EngWord>
                             ) : (
+                                <S.EngWord>{currentWord.eng}</S.EngWord>
+                            )}
+                            {isCorrect ? (
+                                isSwapped ? (
+                                    <S.RusWord>{currentWord.eng}</S.RusWord>
+                                ) : (
+                                    <S.RusWord>{currentWord.rus}</S.RusWord>
+                                )
+                            ) : (
+                                // Добавлена ссылка на inputRef для автоматической установки фокуса
                                 <S.Input
                                     ref={inputRef}
                                     type="text"
@@ -75,8 +88,17 @@ export const Words = ({categoryKey, title}: WordListProps) => {
                 ) : (
                     words.map((word, index) => (
                         <S.TextWrapper key={index}>
-                            <S.EngWord>{word.eng}</S.EngWord>
-                            <S.RusWord>{word.rus}</S.RusWord>
+                            {isSwapped ? (
+                                <>
+                                    <S.EngWord>{word.rus}</S.EngWord>
+                                    <S.RusWord>{word.eng}</S.RusWord>
+                                </>
+                            ) : (
+                                <>
+                                    <S.EngWord>{word.eng}</S.EngWord>
+                                    <S.RusWord>{word.rus}</S.RusWord>
+                                </>
+                            )}
                         </S.TextWrapper>
                     ))
                 )}

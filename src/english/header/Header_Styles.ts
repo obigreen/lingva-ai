@@ -55,7 +55,13 @@ const ThemeSwitcher = styled.button`
     }
 `;
 
+const LogoTitile = styled.span`
+
+`
+const Logo = styled.img`
+
+`
 
 export const S = {
-    Header, HeaderNav, HeaderUl, HeaderLi, LoginLink, ThemeSwitcher
+    Header, HeaderNav, HeaderUl, HeaderLi, LoginLink, ThemeSwitcher, LogoTitile, Logo
 }

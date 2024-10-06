@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 
-export const useWordTest = (questions: { eng: string; rus: string }[]) => {
+export const useWordTest = (word: { eng: string; rus: string }[]) => {
     const [isSingleWordMode, setIsSingleWordMode] = useState(false);
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [inputValue, setInputValue] = useState('');
     const [isCorrect, setIsCorrect] = useState(false);
+
+
 
     // Тоггл режима просмотра одного слова
     const toggleMode = () => {
@@ -17,7 +19,7 @@ export const useWordTest = (questions: { eng: string; rus: string }[]) => {
     const handleNextWord = () => {
         setIsCorrect(false);
         setInputValue('');
-        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % questions.length);
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % word.length);
     };
 
     // Функция проверки перевода (упрощенная для вывода правильного слова)
@@ -43,7 +45,7 @@ export const useWordTest = (questions: { eng: string; rus: string }[]) => {
         };
     }, [inputValue, currentWordIndex, isCorrect]);
 
-    const currentWord = questions[currentWordIndex];
+    const currentWord = word[currentWordIndex];
 
     return {
         isSingleWordMode,
