@@ -37,9 +37,9 @@ export const categoriesData = {
         {eng: 'a little', rus: 'несколько (не мало)'},
         {eng: 'ugly', rus: 'страшный, некрасивый'},
         {eng: 'expensive', rus: 'дорогой (цена)'},
-        {eng: 'cheap', rus: 'дешевый'},
         {eng: 'dirty', rus: 'грязный'},
         {eng: 'famous', rus: 'знаменитый'},
+        {eng: 'important', rus: 'важный'},
     ],
     arrAdverbs: [
         { eng: 'near', rus: 'рядом' },
@@ -66,6 +66,7 @@ export const categoriesData = {
         { eng: 'out loud', rus: 'вслух' },
         { eng: 'almost', rus: 'почти' },
         { eng: 'perhaps', rus: 'может быть' },
+        { eng: 'especially', rus: 'особенно' },
     ],
     arrConjunctionsAndParticle: [
         { eng: 'so', rus: 'так' },
@@ -73,7 +74,7 @@ export const categoriesData = {
         { eng: 'and', rus: 'и' },
         { eng: 'or', rus: 'или' },
         { eng: 'because', rus: 'потому что' },
-        { eng: 'well', rus: 'ну' },
+        { eng: 'well', rus: 'ну, что ж' },
     ],
     arrDayAndTime: [
         { eng: 'Monday', rus: 'Понедельник' },
@@ -173,6 +174,13 @@ export const categoriesData = {
         {eng: 'armchair', rus: 'кресло'},
         {eng: 'dirt', rus: 'грязь'},
         {eng: 'opinion', rus: 'мнение'},
+        {eng: 'dictionary', rus: 'словарь'},
+        {eng: 'cereal', rus: 'хлопья, завтраки'},
+        {eng: 'bread', rus: 'хлеб'},
+        {eng: 'yogurt', rus: 'йогурт'},
+        {eng: 'yogurt', rus: 'йогурт'},
+        {eng: 'cottage cheese', rus: 'творог'},
+        {eng: 'meal', rus: 'прием пищи'},
     ],
     arrPhrases: [
         {eng: 'Me too.', rus: 'Я тоже.'},
@@ -313,7 +321,7 @@ export const categoriesData = {
         {eng: 'Whose?', rus: 'Чей?'},
         {eng: 'Whom?', rus: 'Кому?'},
         {eng: 'What is?', rus: 'Что такое?'},
-        {eng: 'Which', rus: 'Который?'},
+        {eng: 'Which?', rus: 'Который?'},
     ],
     arrVerbs: [
         { eng: 'listen', rus: 'слушать' },
@@ -370,6 +378,8 @@ export const categoriesData = {
         { eng: 'change', rus: 'изменения' },
         { eng: 'understood', rus: 'понял' },
         { eng: 'introduce', rus: 'представлять (человека(о знакомстве))' },
+        { eng: 'spend time', rus: 'проводить время' },
+        { eng: 'make a sing', rus: 'закатить сцену / скандал' },
     ],
     arrFromMyVideo: [
         { eng: 'Listen', rus: 'слушать' },

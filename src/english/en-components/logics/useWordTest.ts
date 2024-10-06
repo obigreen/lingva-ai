@@ -1,6 +1,6 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
-export const useWord = (questions: { eng: string; rus: string }[]) => {
+export const useWordTest = (questions: { eng: string; rus: string }[]) => {
     const [isSingleWordMode, setIsSingleWordMode] = useState(false);
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [inputValue, setInputValue] = useState('');
@@ -20,25 +20,20 @@ export const useWord = (questions: { eng: string; rus: string }[]) => {
         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % questions.length);
     };
 
-    // Удаление символов и приведение к нижнему регистру
-    // const normalizeString = (str: string) => {
-    //     const withoutBrackets = str.replace(/\(.*?\)/g, ''); // Удаляем скобки
-    //     return withoutBrackets.replace(/[^a-zа-яё\s]/gi, '').toLowerCase().trim(); // Удаляем знаки и приводим к нижнему регистру
-    // };
-
-
-    // Просто принимаем любой ввод и считаем его правильным
-    // пока временно убрал так как нет логики в том, что бы в функции проверки делать всегда true, буду прокачивать проверку
-    // !handleCheckTranslation - логика относится к проверке (ее пока нет)!
-    // const handleCheckTranslation = () => {
-    //     setIsCorrect(true);
-    // };
+    // Функция проверки перевода (упрощенная для вывода правильного слова)
+    const handleCheckTranslation = () => {
+        setIsCorrect(true);
+    };
 
     // Обработка нажатия клавиши Enter
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === 'Enter' && !isCorrect) {
-                setIsCorrect(true);
+            if (event.key === 'Enter') {
+                if (!isCorrect) {
+                    handleCheckTranslation();
+                } else {
+                    handleNextWord();
+                }
             }
         };
 
@@ -58,7 +53,7 @@ export const useWord = (questions: { eng: string; rus: string }[]) => {
         setInputValue,
         isCorrect,
         handleNextWord,
-        // handleCheckTranslation - функция проверки (ее пока нет)
+        handleCheckTranslation,
     };
 };
 

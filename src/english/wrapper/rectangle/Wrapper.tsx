@@ -1,5 +1,5 @@
 import React from "react";
-import { useRectangleLogic } from "../../en-components/logics/useWrapper";
+import { useRectangleLogic } from "../../en-components/logics/useRectangleLogic";
 import { S } from './Wrapper_Styles'
 
 interface WrapperProps {

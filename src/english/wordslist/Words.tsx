@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Article, TypeTitle, WordsBlock} from "../../styles/BlockStyles";
 import {S} from '../English_Styles';
 import {useToggleArray} from "../en-components/logics/useToggleArray";
-import {useWord} from "../en-components/logics/useWordTest";
+import {useWordTest} from "../en-components/logics/useWordTest";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Button} from "../en-components/button/Button";
 import {categoriesData} from '../en-components/data/categoriesData';
@@ -16,15 +16,25 @@ type WordListProps = {
 export const Words = ({categoryKey, title}: WordListProps) => {
 
     const [categoryWords, setCategoryWords] = useState(categoriesData[categoryKey]);
+    // Добавлена ссылка для управления фокусом на поле ввода
+    const inputRef = useRef<HTMLInputElement | null>(null);
+
     useEffect(() => {
         setCategoryWords(categoriesData[categoryKey]);
     }, [categoryKey]);
     const {array: words, toggleArray} = useToggleArray(categoryWords);
     const {
         isSingleWordMode, toggleMode, currentWord, inputValue,
-        setInputValue, isCorrect, handleNextWord,
+        setInputValue, isCorrect, handleNextWord, handleCheckTranslation
         //handleCheckTranslation - функция поверки, проверки временно нет
-    } = useWord(words);
+    } = useWordTest(words);
+
+    // Добавлен эффект для установки фокуса на поле ввода при переходе к следующему слову
+    useEffect(() => {
+        if (!isCorrect && inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, [isCorrect, currentWord]);
 
     return (
         <WordsBlock>
@@ -44,6 +54,7 @@ export const Words = ({categoryKey, title}: WordListProps) => {
                                 <S.RusWord>{currentWord.rus}</S.RusWord>
                             ) : (
                                 <S.Input
+                                    ref={inputRef}
                                     type="text"
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
@@ -55,7 +66,7 @@ export const Words = ({categoryKey, title}: WordListProps) => {
                         <FlexWrapper justify={'end'} margin={'20px 0 0 0'}>
                             {!isCorrect ? (
                                 //временная callback заглушка, стояло handleCheckTranslation
-                                <Button onClick={()=>{}} title="Проверить"/>
+                                <Button onClick={handleCheckTranslation} title="Проверить"/>
                             ) : (
                                 <Button onClick={handleNextWord} title="Следующее слово"/>
                             )}
