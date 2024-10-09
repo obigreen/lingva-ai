@@ -12,7 +12,7 @@ const App = () => {
             <S.GlobalWrapper>
                 <Header/>
                 <S.Container>
-                    <S.MainTitle>English</S.MainTitle>
+                    <S.MainTitle>English words</S.MainTitle>
                     <S.NoteBlock>
                         <English/>
                     </S.NoteBlock>
