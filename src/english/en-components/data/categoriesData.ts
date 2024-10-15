@@ -47,6 +47,9 @@ export const categoriesData = {
         {eng: 'hard', rus: 'тяжелый'},
         {eng: 'different', rus: 'разный, другой'},
         {eng: 'annoyed', rus: 'раздраженный'},
+        {eng: 'horrible', rus: 'ужасный, страшный'},
+        {eng: 'bad', rus: 'плохое'},
+        {eng: 'terrible', rus: 'очень плохое'},
     ],
     arrAdverbs: [
         { eng: 'near', rus: 'рядом' },
@@ -193,6 +196,7 @@ export const categoriesData = {
         {eng: 'crisps', rus: 'чипсы'},
         {eng: 'lettuce', rus: 'листовой салат'},
         {eng: 'plane', rus: 'самолет'},
+        {eng: 'horror', rus: 'ужас'},
     ],
     arrPhrases: [
         {eng: 'Me too', rus: 'Я тоже'},
