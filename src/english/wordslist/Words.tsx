@@ -39,6 +39,7 @@ export const Words = ({categoryKey, title}: WordListProps) => {
         }
     }, [isCorrect, currentWord]);
 
+
     return (
         <WordsBlock>
             <TypeTitle>{title}</TypeTitle>

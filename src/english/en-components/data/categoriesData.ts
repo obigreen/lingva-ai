@@ -1,3 +1,4 @@
+
 export const categoriesData = {
     arrAdjectives: [
         {eng: 'old', rus: 'старый'},
@@ -51,12 +52,12 @@ export const categoriesData = {
         {eng: 'bad', rus: 'плохое'},
         {eng: 'terrible', rus: 'очень плохое'},
         {eng: 'Any more', rus: 'больше, еще'},
-        { eng: 'thirsty', rus: 'хочется пить, испытывающий жажду' },
+        {eng: 'thirsty', rus: 'хочется пить, испытывающий жажду'},
     ],
     arrAdverbs: [
         { eng: 'near', rus: 'рядом' },
         { eng: 'very', rus: 'очень' },
-        { eng: 'just', rus: 'только что / просто (в зависимости от контекста)' },
+        { eng: 'just', rus: 'только что, просто (в зависимости от контекста)' },
         { eng: 'still', rus: 'все еще' },
         { eng: 'even', rus: 'даже' },
         { eng: 'also', rus: 'также' },
@@ -83,8 +84,8 @@ export const categoriesData = {
         { eng: 'That\'s why', rus: 'поэтому (разговорный)' },
         { eng: 'Therefore', rus: 'поэтому (формальный)' },
         { eng: 'By the way', rus: 'кстати' },
-        { eng: '!seldom', rus: '!редко (устар.)' },
-        { eng: 'hardly ever', rus: 'почти никогда' },
+        { eng: 'seldom', rus: 'редко (устарело)' },
+        { eng: 'hardly ever', rus: 'редко, почти никогда' },
     ],
     arrConjunctionsAndParticle: [
         { eng: 'so', rus: 'так' },
@@ -198,7 +199,6 @@ export const categoriesData = {
         {eng: 'cereal', rus: 'хлопья, завтраки'},
         {eng: 'bread', rus: 'хлеб'},
         {eng: 'yogurt', rus: 'йогурт'},
-        {eng: 'yogurt', rus: 'йогурт'},
         {eng: 'cottage cheese', rus: 'творог'},
         {eng: 'meal', rus: 'прием пищи'},
         {eng: 'chips', rus: 'жареная картошка'},
@@ -282,14 +282,12 @@ export const categoriesData = {
         {eng: "in (my, her, his...) opinion", rus: "по (моему, ее, его...) мнению или (я, она, он...) считаю(ет)"},
         {eng: "3 times a week", rus: "3 раза в неделю (times - сколько раз)"},
         {eng: "he says (сэс)", rus: "он говорит (3лицо)"},
-        {eng: "have (something) in common', rus: 'иметь (что-то) общее"},
+        {eng: 'have (something) in common', rus: 'иметь (что-то) общее'},
         {eng: 'five out of five', rus: 'пять из пяти'},
         {eng: 'open it', rus: 'открой это'},
-        {eng: 'I got it / Got it', rus: 'Я понял, "понял+принял"'},
+        {eng: 'I got it, Got it', rus: 'Я понял, "понял+принял"'},
         {eng: "It's at", rus: 'Это в (произойдёт в такое-то время)'},
         {eng: 'hurry up', rus: 'поторопись'},
-
-
     ],
     arrPrepositions: [
         { eng: 'for', rus: 'для' },
@@ -430,10 +428,9 @@ export const categoriesData = {
         { eng: 'annoy', rus: 'раздражать' },
         { eng: 'arrive', rus: 'прибывать (транспорт)' },
         { eng: 'wear', rus: 'носить (на себе)' },
-        {eng: 'to end', rus: 'заканчивать'},
-        {eng: 'hurry', rus: 'быстрее, спешить'},
-        {eng: 'worry', rus: 'беспокоиться, волноваться'},
-
+        { eng: 'to end', rus: 'заканчивать' },
+        { eng: 'hurry', rus: 'быстрее, спешить' },
+        { eng: 'worry', rus: 'беспокоиться, волноваться' },
     ],
     arrFromMyVideo: [
         { eng: 'Listen', rus: 'слушать' },
@@ -488,3 +485,4 @@ export const categoriesData = {
         { eng: 'With each video', rus: 'с каждым видео' }
     ]
 }
+
