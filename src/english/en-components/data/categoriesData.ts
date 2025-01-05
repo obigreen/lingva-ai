@@ -308,6 +308,10 @@ export const categoriesData = {
         {eng: 'Can I stay with someone?', rus: 'Могу я остановиться у кого-нибудь?'},
         {eng: 'She is nervous about the exam', rus: 'Она нервничает из-за экзамена'},
         {eng: 'five out of five', rus: 'пять из пяти'},
+        {eng: 'Do you do the same thing every weekend, or are your weekends different?', rus: 'Вы делаете одно и то же каждые выходные, или ваши выходные разные?'},
+        {eng: 'Um, quite early', rus: 'Эм, довольно рано'},
+        {eng: 'Be quiet', rus: 'Будь(те) тихим(и), будь спокоен'},
+
     ],
     arrPrepositions: [
         {eng: 'for', rus: 'для'},
