@@ -55,6 +55,10 @@ export const categoriesData = {
         {eng: 'exciting', rus: 'захватывающий, увлекательный'},
         {eng: 'same', rus: 'тот же самый, одинаковый'},
         {eng: 'nervous', rus: 'нервный, взволнованный, переживающий'},
+        {eng: 'horrible', rus: 'ужасный, отвратительный'},
+        {eng: 'peaceful', rus: 'спокойный, мирный'},
+        {eng: 'frightened', rus: 'испуганный'},
+        {eng: 'alone', rus: 'один, в одиночестве'},
     ],
     arrAdverbs: [
         {eng: 'near', rus: 'рядом'},
@@ -227,6 +231,7 @@ export const categoriesData = {
         {eng: 'mall', rus: 'торговый центр'},
         {eng: 'fun', rus: 'веселье'},
         {eng: 'licence', rus: 'лицензия, разрешение, в/у'},
+        {eng: 'opinion', rus: 'мнение'},
     ],
     arrPhrases: [
         {eng: 'Me too', rus: 'Я тоже'},
@@ -311,7 +316,8 @@ export const categoriesData = {
         {eng: 'Do you do the same thing every weekend, or are your weekends different?', rus: 'Вы делаете одно и то же каждые выходные, или ваши выходные разные?'},
         {eng: 'Um, quite early', rus: 'Эм, довольно рано'},
         {eng: 'Be quiet', rus: 'Будь(те) тихим(и), будь спокоен'},
-
+        {eng: 'at parties', rus: 'на вечеринках'},
+        {eng: 'very loudly', rus: 'очень громко'},
     ],
     arrPrepositions: [
         {eng: 'for', rus: 'для'},
@@ -466,6 +472,7 @@ export const categoriesData = {
         {eng: 'flow', rus: 'течь'},
         {eng: 'rise', rus: 'подниматься, увеличиваться'},
         {eng: 'cause', rus: 'быть причиной'},
+        {eng: 'concentrate', rus: 'сосредоточиться'},
     ],
     arrFromMyVideo: [
         {eng: 'Listen', rus: 'слушать'},
