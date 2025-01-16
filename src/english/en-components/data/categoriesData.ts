@@ -59,6 +59,7 @@ export const categoriesData = {
         {eng: 'peaceful', rus: 'спокойный, мирный'},
         {eng: 'frightened', rus: 'испуганный'},
         {eng: 'alone', rus: 'один, в одиночестве'},
+        {eng: 'special', rus: 'особый, специальный'},
     ],
     arrAdverbs: [
         {eng: 'near', rus: 'рядом'},
@@ -94,6 +95,10 @@ export const categoriesData = {
         {eng: 'hardly ever', rus: 'редко'},
         {eng: 'definitely', rus: 'определённо, точно'},
         {eng: 'tonight', rus: 'сегодня вечером, этой ночью'},
+        {eng: 'especially', rus: 'особенно, в особенности'},
+        {eng: 'once', rus: 'один раз, однажды'},
+        {eng: 'twice', rus: 'дважды, два раза'},
+
     ],
     arrConjunctionsAndParticle: [
         {eng: 'so', rus: 'так'},
@@ -232,6 +237,7 @@ export const categoriesData = {
         {eng: 'fun', rus: 'веселье'},
         {eng: 'licence', rus: 'лицензия, разрешение, в/у'},
         {eng: 'opinion', rus: 'мнение'},
+        {eng: 'rehearsal', rus: 'репетиция'},
     ],
     arrPhrases: [
         {eng: 'Me too', rus: 'Я тоже'},
@@ -318,6 +324,7 @@ export const categoriesData = {
         {eng: 'Be quiet', rus: 'Будь(те) тихим(и), будь спокоен'},
         {eng: 'at parties', rus: 'на вечеринках'},
         {eng: 'very loudly', rus: 'очень громко'},
+        {eng: 'twice a week', rus: 'дважды в неделю'},
     ],
     arrPrepositions: [
         {eng: 'for', rus: 'для'},
