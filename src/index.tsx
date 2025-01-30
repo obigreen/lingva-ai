@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {GlobalStyles} from "./styles/GlobalStyles";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, HashRouter} from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(
@@ -12,12 +12,21 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <React.StrictMode>
-        <BrowserRouter basename={"/lingva-ai"}>
+        <HashRouter>
             <App/>
             <GlobalStyles/>
-        </BrowserRouter>
+        </HashRouter>
     </React.StrictMode>
 );
+
+
+/*
+
+<BrowserRouter basename={"/lingva-ai"}>
+
+</BrowserRouter>
+
+ */
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
