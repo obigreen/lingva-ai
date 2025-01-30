@@ -1,14 +1,16 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 import {NavBar} from "./menu/NavBar";
 import {Words} from "./wordslist/Words";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 
 export const English = () => {
     return (
-        <Router>
+        <>
             <NavBar/>
             <Routes>
+                <Route path={"/"} element={<Navigate to={"/adjectives"}/>}/>
                 <Route path="/adjectives"
                        element={<Words
                            title={'Adjectives'}
@@ -70,7 +72,7 @@ export const English = () => {
                            key="arrFromMyVideo"
                            categoryKey="arrFromMyVideo"/>}/>
             </Routes>
-        </Router>
+        </>
     );
 };
 

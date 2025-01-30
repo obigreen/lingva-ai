@@ -354,6 +354,7 @@ export const categoriesData = {
         {eng: 'by', rus: 'у, рядом с'},
         {eng: 'until', rus: 'до тех пор пока, до (времени)'},
         {eng: 'except', rus: 'кроме, за исключением'},
+        {eng: 'towards /təˈwɔrdz/', rus: 'по направлению к, в сторону'},
     ],
     arrProgrammingLanguage: [
         {eng: 'Is not defined', rus: 'Не существует'},
