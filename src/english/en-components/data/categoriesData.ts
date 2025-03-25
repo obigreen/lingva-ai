@@ -98,7 +98,7 @@ export const categoriesData = {
         {eng: 'especially', rus: 'особенно, в особенности'},
         {eng: 'once', rus: 'один раз, однажды'},
         {eng: 'twice', rus: 'дважды, два раза'},
-
+        {eng: 'abroad', rus: 'за границей'},
     ],
     arrConjunctionsAndParticle: [
         {eng: 'so', rus: 'так'},
@@ -238,6 +238,13 @@ export const categoriesData = {
         {eng: 'licence', rus: 'лицензия, разрешение, в/у'},
         {eng: 'opinion', rus: 'мнение'},
         {eng: 'rehearsal', rus: 'репетиция'},
+        {eng: 'chain', rus: 'цепь, сеть'},
+        {eng: 'pillow', rus: 'подушка'},
+        {eng: 'lake', rus: 'озеро'},
+        {eng: 'towel', rus: 'полотенце'},
+        {eng: 'a gift shop', rus: 'сувенирный магазин'},
+        {eng: 'walls', rus: 'стены'},
+        {eng: 'darling', rus: 'дорогой, любимый (обращение)'},
     ],
     arrPhrases: [
         {eng: 'Me too', rus: 'Я тоже'},
@@ -325,6 +332,7 @@ export const categoriesData = {
         {eng: 'at parties', rus: 'на вечеринках'},
         {eng: 'very loudly', rus: 'очень громко'},
         {eng: 'twice a week', rus: 'дважды в неделю'},
+        {eng: 'cheaper than', rus: 'дешевле чем'},
     ],
     arrPrepositions: [
         {eng: 'for', rus: 'для'},
@@ -481,6 +489,10 @@ export const categoriesData = {
         {eng: 'rise', rus: 'подниматься, увеличиваться'},
         {eng: 'cause', rus: 'быть причиной'},
         {eng: 'concentrate', rus: 'сосредоточиться'},
+        {eng: 'serve', rus: 'обслуживать, подавать'},
+        {eng: 'miss', rus: 'скучать, пропускать'},
+        {eng: 'decide', rus: 'решать, принимать решение'},
+        {eng: 'pick', rus: 'выбирать, срывать'},
     ],
     arrFromMyVideo: [
         {eng: 'Listen', rus: 'слушать'},
