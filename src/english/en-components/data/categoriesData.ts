@@ -61,6 +61,7 @@ export const categoriesData = {
         {eng: 'alone', rus: 'один, в одиночестве'},
         {eng: 'special', rus: 'особый, специальный'},
         {eng: 'pretty', rus: 'красивый'},
+        {eng: 'incredible', rus: 'невероятный'},
     ],
     arrAdverbs: [
         {eng: 'near', rus: 'рядом'},
@@ -247,6 +248,8 @@ export const categoriesData = {
         {eng: 'walls', rus: 'стены'},
         {eng: 'darling', rus: 'дорогой, любимый (обращение)'},
         {eng: 'century', rus: 'век'},
+        {eng: 'buckwheat', rus: 'гречка'},
+        {eng: 'introduction', rus: 'введение'},
     ],
     arrPhrases: [
         {eng: 'Me too', rus: 'Я тоже'},
