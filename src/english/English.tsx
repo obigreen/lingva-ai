@@ -71,6 +71,11 @@ export const English = () => {
                            title={'From video'}
                            key="arrFromMyVideo"
                            categoryKey="arrFromMyVideo"/>}/>
+                <Route path="directions"
+                       element={<Words
+                           title={'Directions'}
+                           key="arrDirections"
+                           categoryKey="arrDirections"/>}/>
             </Routes>
         </>
     );

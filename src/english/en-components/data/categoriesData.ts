@@ -341,6 +341,7 @@ export const categoriesData = {
         {eng: "I'm back", rus: 'Я вернулся'},
         {eng: 'Where is it', rus: 'где это(общее)'},
         {eng: 'Where is that', rus: 'где это(конкретно)'},
+        {eng: "I don't believe it!", rus: 'Я не могу в это поверить!'},
     ],
     arrPrepositions: [
         {eng: 'for', rus: 'для'},
@@ -556,6 +557,16 @@ export const categoriesData = {
         {eng: 'Further', rus: 'дальше'},
         {eng: 'With each video', rus: 'с каждым видео'}
 
+    ],
+    arrDirections: [
+        {eng: 'opposite', rus: 'напротив'},
+        {eng: 'between', rus: 'между'},
+        {eng: 'in the corner', rus: 'в углу'},
+        {eng: 'go straight on', rus: 'идите прямо'},
+        {eng: 'turn left', rus: 'поверните налево'},
+        {eng: 'turn right', rus: 'поверните направо'},
+        {eng: 'near', rus: 'рядом'},
+        {eng: 'next to', rus: 'рядом с, возле'},
     ]
 }
 
