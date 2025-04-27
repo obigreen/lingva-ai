@@ -62,6 +62,7 @@ export const categoriesData = {
         {eng: 'special', rus: 'особый, специальный'},
         {eng: 'pretty', rus: 'красивый'},
         {eng: 'incredible', rus: 'невероятный'},
+        {eng: 'full', rus: 'полный'},
     ],
     arrAdverbs: [
         {eng: 'near', rus: 'рядом'},
@@ -250,6 +251,7 @@ export const categoriesData = {
         {eng: 'century', rus: 'век'},
         {eng: 'buckwheat', rus: 'гречка'},
         {eng: 'introduction', rus: 'введение'},
+        {eng: 'message', rus: 'сообщение'},
     ],
     arrPhrases: [
         {eng: 'Me too', rus: 'Я тоже'},
@@ -342,6 +344,11 @@ export const categoriesData = {
         {eng: 'Where is it', rus: 'где это(общее)'},
         {eng: 'Where is that', rus: 'где это(конкретно)'},
         {eng: "I don't believe it!", rus: 'Я не могу в это поверить!'},
+        {eng: "That's interesting.", rus: 'Это интересно.'},
+        {eng: 'Time to go.', rus: 'Пора идти.'},
+        {eng: 'Would you like to', rus: 'Хотели бы вы'},
+        {eng: "Everything's fine!", rus: 'Всё хорошо!'},
+        {eng: 'By the way', rus: 'Кстати'},
     ],
     arrPrepositions: [
         {eng: 'for', rus: 'для'},
@@ -503,7 +510,8 @@ export const categoriesData = {
         {eng: 'decide', rus: 'решать, принимать решение'},
         {eng: 'pick', rus: 'выбирать, срывать'},
         {eng: 'shave', rus: 'бриться'},
-        {eng: 'enjoy', rus: 'наслаждаться'}
+        {eng: 'enjoy', rus: 'наслаждаться'},
+        {eng: 'exchange', rus: 'обменивать'},
     ],
     arrFromMyVideo: [
         {eng: 'Listen', rus: 'слушать'},
