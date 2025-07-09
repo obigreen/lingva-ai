@@ -63,6 +63,8 @@ export const categoriesData = {
         {eng: 'pretty', rus: 'красивый'},
         {eng: 'incredible', rus: 'невероятный'},
         {eng: 'full', rus: 'полный'},
+        {eng: 'tidy', rus: 'аккуратный, опрятный'},
+        {eng: 'untidy', rus: 'неопрятный, в беспорядке'},
     ],
     arrAdverbs: [
         {eng: 'near', rus: 'рядом'},
@@ -252,6 +254,7 @@ export const categoriesData = {
         {eng: 'buckwheat', rus: 'гречка'},
         {eng: 'introduction', rus: 'введение'},
         {eng: 'message', rus: 'сообщение'},
+        {eng: 'thunderstorm', rus: 'гроза'},
     ],
     arrPhrases: [
         {eng: 'Me too', rus: 'Я тоже'},
@@ -512,6 +515,8 @@ export const categoriesData = {
         {eng: 'shave', rus: 'бриться'},
         {eng: 'enjoy', rus: 'наслаждаться'},
         {eng: 'exchange', rus: 'обменивать'},
+        {eng: 'to sign', rus: 'подписывать'},
+        {eng: 'tidy', rus: 'прибирать'},
     ],
     arrFromMyVideo: [
         {eng: 'Listen', rus: 'слушать'},
