@@ -65,6 +65,7 @@ export const categoriesData = {
         {eng: 'full', rus: 'полный'},
         {eng: 'tidy', rus: 'аккуратный, опрятный'},
         {eng: 'untidy', rus: 'неопрятный, в беспорядке'},
+        {eng: 'valuable', rus: 'ценный'},
     ],
     arrAdverbs: [
         {eng: 'near', rus: 'рядом'},
@@ -255,6 +256,9 @@ export const categoriesData = {
         {eng: 'introduction', rus: 'введение'},
         {eng: 'message', rus: 'сообщение'},
         {eng: 'thunderstorm', rus: 'гроза'},
+        {eng: 'decision', rus: 'решение'},
+        {eng: 'value', rus: 'ценность'},
+
     ],
     arrPhrases: [
         {eng: 'Me too', rus: 'Я тоже'},
@@ -352,6 +356,7 @@ export const categoriesData = {
         {eng: 'Would you like to', rus: 'Хотели бы вы'},
         {eng: "Everything's fine!", rus: 'Всё хорошо!'},
         {eng: 'By the way', rus: 'Кстати'},
+        {eng: 'put it into the box', rus: 'положи это в коробку'},
     ],
     arrPrepositions: [
         {eng: 'for', rus: 'для'},
@@ -374,6 +379,7 @@ export const categoriesData = {
         {eng: 'before', rus: 'до'},
         {eng: 'after', rus: 'после'},
         {eng: 'through', rus: 'через'},
+        {eng: 'inside', rus: 'внутри'},
         {eng: 'over', rus: 'над'},
         {eng: 'under', rus: 'под'},
         {eng: 'between', rus: 'между'},
@@ -470,7 +476,6 @@ export const categoriesData = {
         {eng: 'rest', rus: 'отдыхать'},
         {eng: 'train', rus: 'тренироваться'},
         {eng: 'speak', rus: 'говорить (обычный разговор)'},
-        {eng: 'go', rus: 'идти'},
         {eng: 'take', rus: 'брать'},
         {eng: 'get dressed', rus: 'одеться'},
         {eng: 'think', rus: 'думать'},
@@ -517,6 +522,8 @@ export const categoriesData = {
         {eng: 'exchange', rus: 'обменивать'},
         {eng: 'to sign', rus: 'подписывать'},
         {eng: 'tidy', rus: 'прибирать'},
+        {eng: 'go', rus: 'идти'},
+
     ],
     arrFromMyVideo: [
         {eng: 'Listen', rus: 'слушать'},
