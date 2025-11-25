@@ -3,6 +3,8 @@ import React from 'react';
 import {NavBar} from "./menu/NavBar";
 import {Words} from "./wordslist/Words";
 import {Navigate, Route, Routes} from "react-router-dom";
+import styled from "styled-components";
+import {Notes} from "./notelist/Notes";
 
 
 export const English = () => {
@@ -77,8 +79,35 @@ export const English = () => {
                            key="arrDirections"
                            categoryKey="arrDirections"/>}/>
             </Routes>
+            <NotesPages>
+                <Container>
+
+                    <Notes/>
+
+                </Container>
+            </NotesPages>
         </>
     );
 };
+
+
+const NotesPages = styled.div`
+    display: flex;
+    margin: 0 auto 50px auto;
+    justify-content: center;
+    max-width: 900px;
+    padding: 0 15px;
+
+`
+
+const Container = styled.div`
+    position: relative;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+`
 
 
