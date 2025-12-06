@@ -7,10 +7,36 @@ import styled from "styled-components";
 import {Notes} from "./notelist/Notes";
 
 
+
+const wordCategories = [
+    { path: "/verbs", title: "Verbs" },
+    { path: "/nouns", title: "Nouns" },
+    { path: "/adjectives", title: "Adjectives" },
+    { path: "/questions", title: "Questions" },
+    { path: "/pronouns", title: "Pronouns" },
+    { path: "/prepositions", title: "Prepositions" },
+    { path: "/conjunctions", title: "Conjunctions and Particle" },
+    { path: "/adverbs", title: "Adverbs" },
+    { path: "/phrases", title: "Phrases" },
+    { path: "/day-and-time", title: "Day and Time" },
+    { path: "/programming-translate", title: "Programming Language" },
+    { path: "/from-video", title: "From video" },
+    { path: "/directions", title: "Directions" }
+];
+
+const notesNavItems = [
+    { path: "general", title: "General notes" },
+    { path: "grammar", title: "Grammar" },
+    { path: "vocabulary", title: "Vocabulary" },
+];
+
+
+
 export const English = () => {
     return (
         <>
-            <NavBar/>
+            <NavBar items={wordCategories}/>
+
             <Routes>
                 <Route path={"/"} element={<Navigate to={"adjectives"}/>}/>
                 <Route path="adjectives"
@@ -78,36 +104,32 @@ export const English = () => {
                            title={'Directions'}
                            key="arrDirections"
                            categoryKey="arrDirections"/>}/>
+
+                {/*<Route path="notes/*" element={<NotesLayout />} />*/}
             </Routes>
-            <NotesPages>
-                <Container>
 
-                    <Notes/>
+            <Space>
 
-                </Container>
-            </NotesPages>
+            </Space>
+
+            <NavBar items={notesNavItems} />
+
+            <Routes>
+                <Route path="/" element={<Navigate to="general" />} />
+
+                <Route path="general" element={<Notes />} />
+                <Route path="grammar" element={<Notes />} />
+                <Route path="vocabulary" element={<Notes />} />
+
+            </Routes>
         </>
     );
 };
 
 
-const NotesPages = styled.div`
-    display: flex;
-    margin: 0 auto 50px auto;
-    justify-content: center;
-    max-width: 900px;
-    padding: 0 15px;
+const Space = styled.div`
+    width: 100%;
+    height: 60px;
 
 `
-
-const Container = styled.div`
-    position: relative;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 12px;
-    background-color: #f7f7f7;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-`
-
 
