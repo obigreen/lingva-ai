@@ -105,6 +105,9 @@ export const categoriesData = {
         {eng: 'once', rus: 'один раз, однажды'},
         {eng: 'twice', rus: 'дважды, два раза'},
         {eng: 'abroad', rus: 'за границей'},
+        {eng: 'however', rus: 'однако, тем не менее'},
+        {eng: 'unfortunately', rus: 'к сожалению'},
+
     ],
     arrConjunctionsAndParticle: [
         {eng: 'so', rus: 'так'},
