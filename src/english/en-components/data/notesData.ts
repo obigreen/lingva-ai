@@ -2,10 +2,15 @@
 export type NoteBlock =
     | { type: 'h2'; content: string }
     | { type: 'p'; content: string }
-    | { type: 'ul'; items: string[] };
+    | { type: 'ul'; items: string[] }
+    | {
+    type: 'table';
+    headers: string[];
+    rows: string[][];
+};
 
 // Ключи заметок
-export type NoteKey = 'general' | 'test' | 'pastSimpleBasics';
+export type NoteKey = 'general' | 'pastSimpleBasics' | 'irregularVerbsTable' | 'test';
 
 // Описание одной заметки
 export type Note = {
@@ -468,6 +473,132 @@ export const notesData: Record<NoteKey, Note> = {
             },
         ],
     },
+
+    irregularVerbsTable: {
+        title: 'Irregular Verbs — reference table',
+        blocks: [
+            {
+                type: 'p',
+                content:
+                    'This page is a reference table of the most common irregular verbs with Past Simple, Past Participle and Russian translation.',
+            },
+
+            {
+                type: 'table',
+                headers: [
+                    'Infinitive',
+                    'Past Simple',
+                    'Past Participle',
+                    'Translation',
+                ],
+                rows: [
+                    ['be', 'was / were', 'been', 'быть'],
+                    ['beat', 'beat', 'beaten', 'бить'],
+                    ['become', 'became', 'become', 'становиться'],
+                    ['begin', 'began', 'begun', 'начинать'],
+                    ['bite', 'bit', 'bitten', 'кусать'],
+                    ['blow', 'blew', 'blown', 'дуть'],
+                    ['break', 'broke', 'broken', 'ломать(ся)'],
+                    ['bring', 'brought', 'brought', 'приносить'],
+                    ['build', 'built', 'built', 'строить'],
+                    ['burst', 'burst', 'burst', 'разрываться'],
+                    ['buy', 'bought', 'bought', 'покупать'],
+                    ['catch', 'caught', 'caught', 'ловить'],
+                    ['choose', 'chose', 'chosen', 'выбирать'],
+                    ['come', 'came', 'come', 'приходить'],
+                    ['cost', 'cost', 'cost', 'стоить'],
+                    ['cut', 'cut', 'cut', 'резать'],
+                    ['deal', 'dealt', 'dealt', 'иметь дело'],
+                    ['dig', 'dug', 'dug', 'копать'],
+                    ['do', 'did', 'done', 'делать'],
+                    ['draw', 'drew', 'drawn', 'рисовать / тянуть'],
+                    ['drink', 'drank', 'drunk', 'пить'],
+                    ['drive', 'drove', 'driven', 'водить'],
+                    ['eat', 'ate', 'eaten', 'есть'],
+                    ['fall', 'fell', 'fallen', 'падать'],
+                    ['feed', 'fed', 'fed', 'кормить'],
+                    ['feel', 'felt', 'felt', 'чувствовать'],
+                    ['fight', 'fought', 'fought', 'драться'],
+                    ['find', 'found', 'found', 'находить'],
+                    ['fly', 'flew', 'flown', 'летать'],
+                    ['forget', 'forgot', 'forgotten', 'забывать'],
+                    ['freeze', 'froze', 'frozen', 'замерзать'],
+                    ['get', 'got', 'got / gotten', 'получать'],
+                    ['give', 'gave', 'given', 'давать'],
+                    ['go', 'went', 'gone', 'идти'],
+                    ['grow', 'grew', 'grown', 'расти'],
+                    ['hang', 'hung', 'hung', 'вешать'],
+                    ['have', 'had', 'had', 'иметь'],
+                    ['hear', 'heard', 'heard', 'слышать'],
+                    ['hide', 'hid', 'hidden', 'прятать'],
+                    ['hit', 'hit', 'hit', 'ударять'],
+                    ['hold', 'held', 'held', 'держать'],
+                    ['keep', 'kept', 'kept', 'хранить'],
+                    ['know', 'knew', 'known', 'знать'],
+                    ['lay', 'laid', 'laid', 'класть'],
+                    ['lead', 'led', 'led', 'вести'],
+                    ['learn', 'learnt / learned', 'learnt / learned', 'учить'],
+                    ['leave', 'left', 'left', 'уходить'],
+                    ['lend', 'lent', 'lent', 'одалживать'],
+                    ['let', 'let', 'let', 'позволять'],
+                    ['lie', 'lay', 'lain', 'лежать'],
+                    ['lose', 'lost', 'lost', 'терять'],
+                    ['make', 'made', 'made', 'делать'],
+                    ['mean', 'meant', 'meant', 'значить'],
+                    ['meet', 'met', 'met', 'встречать'],
+                    ['pay', 'paid', 'paid', 'платить'],
+                    ['put', 'put', 'put', 'класть'],
+                    ['read', 'read', 'read', 'читать'],
+                    ['ride', 'rode', 'ridden', 'ехать'],
+                    ['ring', 'rang', 'rung', 'звонить'],
+                    ['run', 'ran', 'run', 'бегать'],
+                    ['say', 'said', 'said', 'говорить'],
+                    ['see', 'saw', 'seen', 'видеть'],
+                    ['seek', 'sought', 'sought', 'искать'],
+                    ['sell', 'sold', 'sold', 'продавать'],
+                    ['send', 'sent', 'sent', 'отправлять'],
+                    ['set', 'set', 'set', 'ставить'],
+                    ['shake', 'shook', 'shaken', 'трясти'],
+                    ['shine', 'shone', 'shone', 'сиять'],
+                    ['shoot', 'shot', 'shot', 'стрелять'],
+                    ['show', 'showed', 'shown', 'показывать'],
+                    ['shut', 'shut', 'shut', 'закрывать'],
+                    ['sing', 'sang', 'sung', 'петь'],
+                    ['sit', 'sat', 'sat', 'сидеть'],
+                    ['sleep', 'slept', 'slept', 'спать'],
+                    ['smell', 'smelt / smelled', 'smelt / smelled', 'пахнуть'],
+                    ['speak', 'spoke', 'spoken', 'говорить'],
+                    ['spend', 'spent', 'spent', 'тратить'],
+                    ['stand', 'stood', 'stood', 'стоять'],
+                    ['steal', 'stole', 'stolen', 'воровать'],
+                    ['sting', 'stung', 'stung', 'жалить'],
+                    ['swim', 'swam', 'swum', 'плавать'],
+                    ['take', 'took', 'taken', 'брать'],
+                    ['teach', 'taught', 'taught', 'учить'],
+                    ['tear', 'tore', 'torn', 'рвать'],
+                    ['tell', 'told', 'told', 'рассказывать'],
+                    ['think', 'thought', 'thought', 'думать'],
+                    ['throw', 'threw', 'thrown', 'бросать'],
+                    ['wake', 'woke / waked', 'woken / waked', 'будить'],
+                    ['wear', 'wore', 'worn', 'носить'],
+                    ['win', 'won', 'won', 'выигрывать'],
+                    ['write', 'wrote', 'written', 'писать'],
+                ],
+            },
+
+            {
+                type: 'p',
+                content:
+                    'Notes: In British English forms like learnt and smelt are more common. In American English learned and smelled are preferred.',
+            },
+            {
+                type: 'p',
+                content:
+                    'Get: got is standard in British English. Gotten is used in American English to show a result or state.',
+            },
+        ],
+    },
+
 
     // Остальные страницы пока заглушки — потом дополнишь
     test: {

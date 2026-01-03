@@ -27,6 +27,7 @@ const wordCategories = [
 const notesNavItems = [
     {path: "/general", title: "General notes"},
     {path: "/pastSimpleBasics", title: "Past Simple & core verb patterns"},
+    {path: "/irregularVerbsTable", title: "Irregular Verbs — reference table"},
     {path: "/test", title: "Test"},
 ];
 
@@ -127,6 +128,12 @@ export const English = () => {
                     title={"Grammar notes"}
                     key="test"
                     categoryKey={"test"}/>}/>
+
+
+                <Route path="irregularVerbsTable" element={<Notes
+                    title={"Irregular Verbs — reference table"}
+                    key="irregularVerbsTable"
+                    categoryKey={"irregularVerbsTable"}/>}/>
 
             </Routes>
 

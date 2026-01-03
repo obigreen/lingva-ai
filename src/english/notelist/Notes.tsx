@@ -55,6 +55,31 @@ const renderBlock = (block: NoteBlock, index: number) => {
                     ))}
                 </Ul>
             );
+
+        case "table":
+            return (
+                <TableWrapper key={index}>
+                    <StyledTable>
+                        <thead>
+                        <tr>
+                            {block.headers.map((header, idx) => (
+                                <th key={idx}>{header}</th>
+                            ))}
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {block.rows.map((row, rowIndex) => (
+                            <tr key={rowIndex}>
+                                {row.map((cell, cellIndex) => (
+                                    <td key={cellIndex}>{cell}</td>
+                                ))}
+                            </tr>
+                        ))}
+                        </tbody>
+                    </StyledTable>
+                </TableWrapper>
+            );
         default:
             return null;
     }
@@ -87,3 +112,33 @@ const Ul = styled.ul`
         list-style: disc;
     }
 `;
+
+
+const TableWrapper = styled.div`
+    overflow-x: auto;
+    margin: 20px 0;
+`;
+
+const StyledTable = styled.table`
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+
+    th,
+    td {
+        padding: 10px 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #f3f3f3;
+        font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+`;
+
