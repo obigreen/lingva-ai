@@ -5,18 +5,17 @@ import { S } from './NavBar_Styles'
 
 
 type Items = {
-    title: string;
     path: string;
+    title: string;
 }
 
 export type NavBarProps = {
     items: Items[];
-    title?: string;
 }
 
 
 
-export const NavBar = ({items, title} : NavBarProps) => {
+export const NavBar = ({items} : NavBarProps) => {
     return (
         <S.HeaderNav>
             <S.Nav>

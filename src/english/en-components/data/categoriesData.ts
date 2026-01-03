@@ -107,7 +107,7 @@ export const categoriesData = {
         {eng: 'abroad', rus: 'за границей'},
         {eng: 'however', rus: 'однако, тем не менее'},
         {eng: 'unfortunately', rus: 'к сожалению'},
-
+        {eng: 'rarely', rus: 'редко'}
     ],
     arrConjunctionsAndParticle: [
         {eng: 'so', rus: 'так'},
@@ -431,7 +431,7 @@ export const categoriesData = {
         {eng: 'anything', rus: 'что-то, что-нибудь, ничего (в отрицаниях)'},
 
     ],
-    arrQestions: [
+    arrQuestions: [
         {eng: 'What?', rus: 'Что?'},
         {eng: 'Who?', rus: 'Кто?'},
         {eng: 'Where?', rus: 'Где?'},
@@ -526,7 +526,8 @@ export const categoriesData = {
         {eng: 'to sign', rus: 'подписывать'},
         {eng: 'tidy', rus: 'прибирать'},
         {eng: 'go', rus: 'идти'},
-
+        {eng: 'arrange', rus: 'организовывать, договариваться'},
+        {eng: 'to promise', rus: 'обещать'}
     ],
     arrFromMyVideo: [
         {eng: 'Listen', rus: 'слушать'},
@@ -592,4 +593,6 @@ export const categoriesData = {
         {eng: 'next to', rus: 'рядом с, возле'},
     ]
 }
+
+
 

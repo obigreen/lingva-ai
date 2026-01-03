@@ -5,7 +5,7 @@ export type NoteBlock =
     | { type: 'ul'; items: string[] };
 
 // Ключи заметок
-export type NoteKey = 'general' | 'grammar' | 'vocabulary';
+export type NoteKey = 'general' | 'test' | 'pastSimpleBasics';
 
 // Описание одной заметки
 export type Note = {
@@ -354,14 +354,128 @@ export const notesData: Record<NoteKey, Note> = {
         ],
     },
 
+    pastSimpleBasics: {
+        title: 'Past Simple & core verb patterns',
+        blocks: [
+            {
+                type: 'h2',
+                content: 'Verb GET — one of the most important verbs in English',
+            },
+            {
+                type: 'p',
+                content:
+                    'Глагол get редко переводится буквально как «получать». В реальной речи он часто меняет значение в зависимости от контекста и заменяет другие глаголы.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'get a newspaper — купить / достать',
+                    'get a taxi — взять такси',
+                    'get an email — получить письмо',
+                    'get dressed — одеться',
+                    'get home — добраться домой',
+                    'get to the airport — добраться до аэропорта',
+                    'get up (early / late) — вставать',
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'Вывод: get = получать / становиться / добираться / начинать состояние. Это «супер-глагол», который часто заменяет другие.',
+            },
+
+            {
+                type: 'h2',
+                content: 'Past Simple — irregular verbs (неправильные глаголы)',
+            },
+            {
+                type: 'p',
+                content:
+                    'Неправильные глаголы не образуют Past Simple по правилу. Их форму нужно запоминать.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'buy → bought',
+                    'can → could',
+                    'come → came',
+                    'drink → drank',
+                    'feel → felt',
+                    'find → found',
+                    'get → got',
+                    'go → went',
+                    'have → had',
+                    'know → knew',
+                    'say → said',
+                    'take → took',
+                    'think → thought',
+                    'wear → wore',
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'Важно: форма Past Simple у неправильных глаголов не строится логически — только заучивание. В утвердительных предложениях вспомогательный did не используется.',
+            },
+
+            {
+                type: 'h2',
+                content: 'CAN → COULD (Past Simple)',
+            },
+            {
+                type: 'p',
+                content:
+                    'В прошедшем времени can всегда превращается в could — во всех типах предложений.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Утверждение: We could see the city.',
+                    'Отрицание: I couldn’t see him.',
+                    'Вопрос: Could you wear jeans at school?',
+                    '❌ I didn’t can see him — НЕПРАВИЛЬНО',
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'Правило: can → could. Отрицание: could not / couldn’t. Вопрос: could + subject.',
+            },
+
+            {
+                type: 'h2',
+                content: 'Past Simple — spelling rules (-ed)',
+            },
+            {
+                type: 'p',
+                content:
+                    'При образовании Past Simple у правильных глаголов важно учитывать орфографию.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    '+ed: like → liked',
+                    'согласная + y → ied: cry → cried',
+                    'гласная + y → yed: play → played',
+                    'короткий гласный + согласная → удвоение: stop → stopped, plan → planned',
+                    'НО: fix → fixed (x не удваивается)',
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'Подсказка: буквы X, W, Y никогда не удваиваются.',
+            },
+        ],
+    },
+
     // Остальные страницы пока заглушки — потом дополнишь
-    grammar: {
-        title: 'Grammar notes',
+    test: {
+        title: 'Test',
         blocks: [{ type: 'p', content: 'Здесь будет грамматика.' }],
     },
 
-    vocabulary: {
-        title: 'Vocabulary notes',
-        blocks: [{ type: 'p', content: 'Здесь будет словарный запас.' }],
-    },
+
+
+
 };

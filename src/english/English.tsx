@@ -7,29 +7,28 @@ import styled from "styled-components";
 import {Notes} from "./notelist/Notes";
 
 
-
 const wordCategories = [
-    { path: "/verbs", title: "Verbs" },
-    { path: "/nouns", title: "Nouns" },
-    { path: "/adjectives", title: "Adjectives" },
-    { path: "/questions", title: "Questions" },
-    { path: "/pronouns", title: "Pronouns" },
-    { path: "/prepositions", title: "Prepositions" },
-    { path: "/conjunctions", title: "Conjunctions and Particle" },
-    { path: "/adverbs", title: "Adverbs" },
-    { path: "/phrases", title: "Phrases" },
-    { path: "/day-and-time", title: "Day and Time" },
-    { path: "/programming-translate", title: "Programming Language" },
-    { path: "/from-video", title: "From video" },
-    { path: "/directions", title: "Directions" }
+    {path: "/verbs", title: "Verbs"},
+    {path: "/nouns", title: "Nouns"},
+    {path: "/adjectives", title: "Adjectives"},
+    {path: "/questions", title: "Questions"},
+    {path: "/pronouns", title: "Pronouns"},
+    {path: "/prepositions", title: "Prepositions"},
+    {path: "/conjunctions", title: "Conjunctions and Particle"},
+    {path: "/adverbs", title: "Adverbs"},
+    {path: "/phrases", title: "Phrases"},
+    {path: "/day-and-time", title: "Day and Time"},
+    {path: "/programming-translate", title: "Programming Language"},
+    {path: "/from-video", title: "From video"},
+    {path: "/directions", title: "Directions"}
 ];
+
 
 const notesNavItems = [
-    { path: "general", title: "General notes" },
-    { path: "grammar", title: "Grammar" },
-    { path: "vocabulary", title: "Vocabulary" },
+    {path: "/general", title: "General notes"},
+    {path: "/pastSimpleBasics", title: "Past Simple & core verb patterns"},
+    {path: "/test", title: "Test"},
 ];
-
 
 
 export const English = () => {
@@ -39,6 +38,7 @@ export const English = () => {
 
             <Routes>
                 <Route path={"/"} element={<Navigate to={"adjectives"}/>}/>
+
                 <Route path="adjectives"
                        element={<Words
                            title={'Adjectives'}
@@ -87,8 +87,8 @@ export const English = () => {
                 <Route path="questions"
                        element={<Words
                            title={'Qestions'}
-                           key="arrQestions"
-                           categoryKey="arrQestions"/>}/>
+                           key="arrQuestions"
+                           categoryKey="arrQuestions"/>}/>
                 <Route path="verbs"
                        element={<Words
                            title={'Verbs'}
@@ -104,24 +104,32 @@ export const English = () => {
                            title={'Directions'}
                            key="arrDirections"
                            categoryKey="arrDirections"/>}/>
-
-                {/*<Route path="notes/*" element={<NotesLayout />} />*/}
             </Routes>
 
-            <Space>
 
-            </Space>
+            <Space/>
 
-            <NavBar items={notesNavItems} />
 
+            <NavBar items={notesNavItems}/>
             <Routes>
-                <Route path="/" element={<Navigate to="general" />} />
+                <Route path="general" element={<Notes
+                    title={"General notes"}
+                    key="general"
+                    categoryKey={"general"}
+                />}/>
 
-                <Route path="general" element={<Notes />} />
-                <Route path="grammar" element={<Notes />} />
-                <Route path="vocabulary" element={<Notes />} />
+                <Route path="pastSimpleBasics" element={<Notes
+                    title={"Past Simple & core verb patterns"}
+                    key="pastSimpleBasics"
+                    categoryKey={"pastSimpleBasics"}/>}/>
+
+                <Route path="test" element={<Notes
+                    title={"Grammar notes"}
+                    key="test"
+                    categoryKey={"test"}/>}/>
 
             </Routes>
+
         </>
     );
 };
@@ -130,6 +138,6 @@ export const English = () => {
 const Space = styled.div`
     width: 100%;
     height: 60px;
-
 `
+
 

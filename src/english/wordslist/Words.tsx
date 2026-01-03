@@ -17,16 +17,22 @@ type WordListProps = {
 export const Words = ({categoryKey, title}: WordListProps) => {
 
     const [categoryWords, setCategoryWords] = useState(categoriesData[categoryKey]);
-    // Добавлена ссылка для управления фокусом на поле ввода
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     useEffect(() => {
         setCategoryWords(categoriesData[categoryKey]);
     }, [categoryKey]);
     const {array: words, toggleArray} = useToggleArray(categoryWords);
+
     const {
-        isSingleWordMode, toggleMode, currentWord, inputValue,
-        setInputValue, isCorrect, handleNextWord, handleCheckTranslation
+        isSingleWordMode,
+        toggleMode,
+        currentWord,
+        inputValue,
+        setInputValue,
+        isCorrect,
+        handleNextWord,
+        handleCheckTranslation
         //handleCheckTranslation - функция поверки, проверки временно нет
     } = useWordTest(words);
 

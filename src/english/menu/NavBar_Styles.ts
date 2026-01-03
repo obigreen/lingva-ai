@@ -3,7 +3,7 @@ import styled from "styled-components";
 const HeaderNav = styled.header`
     display: flex;
     margin: 0 auto 50px auto;
-    justify-content: center;
+    //justify-content: center;
     max-width: 900px;
     padding: 0 15px;
 `

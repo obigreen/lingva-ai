@@ -1,25 +1,29 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
-import { Article, TypeTitle } from "../../styles/BlockStyles";
-import { FlexWrapper } from "../../components/FlexWrapper";
-import { useParams } from "react-router-dom";
-import { notesData, NoteBlock, NoteKey } from "../en-components/data/notesData";
+import {Article, TypeTitle} from "../../styles/BlockStyles";
+import {FlexWrapper} from "../../components/FlexWrapper";
+import {notesData, NoteBlock} from "../en-components/data/notesData";
 
-export const Notes = () => {
-    const { noteKey } = useParams<{ noteKey?: string }>();
 
-    // Если нет ключа в урле — можно выбрать дефолт, например "general"
-    const safeKey: NoteKey = (noteKey as NoteKey) || "general";
+type NotesListProps = {
+    categoryKey: keyof typeof notesData;
+    title: string
+}
 
-    const note = notesData[safeKey];
 
-    if (!note) {
-        return <div>Такой страницы конспекта нет</div>;
-    }
+export const Notes = ({categoryKey}: NotesListProps) => {
+
+
+    const [categoryNotes, setCategoryNotes] = useState(notesData[categoryKey]);
+
+    useEffect(() => {
+        setCategoryNotes(notesData[categoryKey]);
+    }, [categoryKey]);
+
 
     return (
         <NotesBlock>
-            <TypeTitle>{note.title}</TypeTitle>
+            <TypeTitle>{categoryNotes.title}</TypeTitle>
 
             <Article>
                 <FlexWrapper
@@ -31,7 +35,7 @@ export const Notes = () => {
                     {/* сюда потом добавим кнопки, фильтры, режимы */}
                 </FlexWrapper>
 
-                {note.blocks.map((block, index) => renderBlock(block, index))}
+                {categoryNotes.blocks.map((block, index) => renderBlock(block, index))}
             </Article>
         </NotesBlock>
     );
@@ -77,6 +81,7 @@ const P = styled.p`
 
 const Ul = styled.ul`
     margin: 10px 0 20px 20px;
+
     li {
         margin-bottom: 6px;
         list-style: disc;
