@@ -403,6 +403,8 @@ export const categoriesData = {
         {eng: 'Current', rus: 'Текущий'},
         {eng: 'Event', rus: 'Событие'},
         {eng: 'Сhange', rus: 'Изменения'},
+        {eng: 'Request', rus: 'Запрос'},
+        {eng: 'Reply', rus: 'Ответ'},
     ],
     arrPronouns: [
         {eng: 'he, she, it', rus: 'он, она, это'},
