@@ -107,7 +107,9 @@ export const categoriesData = {
         {eng: 'abroad', rus: 'за границей'},
         {eng: 'however', rus: 'однако, тем не менее'},
         {eng: 'unfortunately', rus: 'к сожалению'},
-        {eng: 'rarely', rus: 'редко'}
+        {eng: 'rarely', rus: 'редко'},
+        {eng: 'probably', rus: 'вероятно, возможно'}
+
     ],
     arrConjunctionsAndParticle: [
         {eng: 'so', rus: 'так'},
@@ -449,6 +451,7 @@ export const categoriesData = {
     ],
     arrVerbs: [
         {eng: 'listen', rus: 'слушать'},
+        {eng: 'hear', rus: 'слышать'},
         {eng: 'open', rus: 'открыть'},
         {eng: 'visit', rus: 'посещать'},
         {eng: 'learn', rus: 'учить'},

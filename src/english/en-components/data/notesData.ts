@@ -415,6 +415,12 @@ export const notesData: Record<NoteKey, Note> = {
                     'take → took',
                     'think → thought',
                     'wear → wore',
+                    'drive → drove',
+                    'make → made',
+                    'sit → sat',
+                    'read → read[red])',
+                    'hear → heard',
+                    'leave → left',
                 ],
             },
             {
