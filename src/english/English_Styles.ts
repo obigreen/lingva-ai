@@ -19,7 +19,7 @@ const TextWrapper = styled.div`
     }
 `
 
-const RusWord = styled.p`
+const SourceWord = styled.p`
     ${font({weight: 600, maxW: 20, minW: 15})};
     font-style: normal;
     max-width: 100%;
@@ -34,7 +34,7 @@ const RusWord = styled.p`
     }
 
 `
-const EngWord = styled.p`
+const TargetWord = styled.p`
     ${font({weight: 600, maxW: 20, minW: 15})};
     font-style: normal;
     max-width: 100%;
@@ -64,5 +64,5 @@ const Input = styled.input`
 `
 
 export const S = {
-    TextWrapper, RusWord, EngWord, Input
+    TextWrapper, SourceWord, TargetWord, Input
 }

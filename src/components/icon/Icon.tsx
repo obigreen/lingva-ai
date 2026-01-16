@@ -1,5 +1,5 @@
 import React from 'react';
-import iconSprite from '../../accets/img/icons-sprite.svg'
+import iconSprite from '../../assets/img/icons-sprite.svg'
 
 
 type IconPropsType = {

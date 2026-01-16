@@ -8,19 +8,29 @@ import {Button} from "../en-components/button/Button";
 import {categoriesData} from '../en-components/data/categoriesData';
 import {WrappButton} from "../wrapper/WrappButton";
 import {useSwapWords} from "../en-components/logics/useSwapWords";
+import {DisplayController, DisplayWord} from "../display/DisplayController";
+import {DEFAULT_DISPLAY_CONFIG, DisplayConfig} from "../display/DisplaySettings";
 
 type WordListProps = {
     categoryKey: keyof typeof categoriesData;
     title: string
 }
 
+
+// ======= new
+type WordsMode = "list" | "display-settings" | "display-running";
+// ======= new
+
+
 export const Words = ({categoryKey, title}: WordListProps) => {
 
     const [categoryWords, setCategoryWords] = useState(categoriesData[categoryKey]);
     const inputRef = useRef<HTMLInputElement | null>(null);
 
+
     useEffect(() => {
         setCategoryWords(categoriesData[categoryKey]);
+        setMode("list");
     }, [categoryKey]);
     const {array: words, toggleArray} = useToggleArray(categoryWords);
 
@@ -46,70 +56,119 @@ export const Words = ({categoryKey, title}: WordListProps) => {
     }, [isCorrect, currentWord]);
 
 
+    // ======= new
+    const [mode, setMode] = useState<WordsMode>("list");
+    const [displayConfig, setDisplayConfig] = useState<DisplayConfig>(
+        DEFAULT_DISPLAY_CONFIG
+    );
+
+    const displayWords: DisplayWord[] = words.map(word => ({
+        source: word.source,
+        target: word.target
+    }));
+    // ======= new
+
     return (
         <WordsBlock>
             <TypeTitle>{title}</TypeTitle>
-            <Article>
-                <FlexWrapper gap={'20px'} margin={'0 0 20px 0'} justify={'end'} position={'relative'}>
-                    <Button onClick={toggleArray} iconId={'random'}/>
-                    <Button onClick={toggleMode} iconId={isSingleWordMode ? "back" : "englishWord"}/>
-                    <WrappButton />
-                    <Button onClick={toggleSwap} iconId={'arrows'} />
-                </FlexWrapper>
 
-                {isSingleWordMode ? (
-                    <div>
-                        <S.TextWrapper>
-                            {isSwapped ? (
-                                <S.EngWord>{currentWord.rus}</S.EngWord>
-                            ) : (
-                                <S.EngWord>{currentWord.eng}</S.EngWord>
-                            )}
-                            {isCorrect ? (
-                                isSwapped ? (
-                                    <S.RusWord>{currentWord.eng}</S.RusWord>
+            {/* ========== ОСНОВНОЙ РЕЖИМ (СЛОВАРЬ) ========== */}
+            {mode === "list" && (
+                <Article>
+                    <FlexWrapper
+                        gap={'20px'}
+                        margin={'0 0 20px 0'}
+                        justify={'end'}
+                        position={'relative'}
+                    >
+                        <Button onClick={toggleArray} iconId={'random'} />
+                        <Button
+                            onClick={toggleMode}
+                            iconId={isSingleWordMode ? "back" : "englishWord"}
+                        />
+                        <WrappButton />
+                        <Button onClick={toggleSwap} iconId={'arrows'} />
+
+                        {/* 🔥 DISPLAY MODE */}
+                        <Button
+                            title="Display"
+                            onClick={() => setMode("display-settings")}
+                        />
+                    </FlexWrapper>
+
+                    {isSingleWordMode ? (
+                        <div>
+                            <S.TextWrapper>
+                                {isSwapped ? (
+                                    <S.TargetWord>{currentWord.source}</S.TargetWord>
                                 ) : (
-                                    <S.RusWord>{currentWord.rus}</S.RusWord>
-                                )
-                            ) : (
-                                // Добавлена ссылка на inputRef для автоматической установки фокуса
-                                <S.Input
-                                    ref={inputRef}
-                                    type="text"
-                                    value={inputValue}
-                                    onChange={(e) => setInputValue(e.target.value)}
-                                    placeholder="Введите перевод"
-                                />
-                            )}
-                        </S.TextWrapper>
+                                    <S.TargetWord>{currentWord.target}</S.TargetWord>
+                                )}
 
-                        <FlexWrapper justify={'end'} margin={'20px 0 0 0'}>
-                            {!isCorrect ? (
-                                //временная callback заглушка, стояло handleCheckTranslation
-                                <Button onClick={handleCheckTranslation} title="Проверить"/>
-                            ) : (
-                                <Button onClick={handleNextWord} title="Следующее слово"/>
-                            )}
-                        </FlexWrapper>
-                    </div>
-                ) : (
-                    words.map((word, index) => (
-                        <S.TextWrapper key={index}>
-                            {isSwapped ? (
-                                <>
-                                    <S.EngWord>{word.rus}</S.EngWord>
-                                    <S.RusWord>{word.eng}</S.RusWord>
-                                </>
-                            ) : (
-                                <>
-                                    <S.EngWord>{word.eng}</S.EngWord>
-                                    <S.RusWord>{word.rus}</S.RusWord>
-                                </>
-                            )}
-                        </S.TextWrapper>
-                    ))
-                )}
-            </Article>
+                                {isCorrect ? (
+                                    isSwapped ? (
+                                        <S.SourceWord>{currentWord.target}</S.SourceWord>
+                                    ) : (
+                                        <S.SourceWord>{currentWord.source}</S.SourceWord>
+                                    )
+                                ) : (
+                                    <S.Input
+                                        ref={inputRef}
+                                        type="text"
+                                        value={inputValue}
+                                        onChange={(e) => setInputValue(e.target.value)}
+                                        placeholder="Введите перевод"
+                                    />
+                                )}
+                            </S.TextWrapper>
+
+                            <FlexWrapper justify={'end'} margin={'20px 0 0 0'}>
+                                {!isCorrect ? (
+                                    <Button
+                                        onClick={handleCheckTranslation}
+                                        title="Проверить"
+                                    />
+                                ) : (
+                                    <Button
+                                        onClick={handleNextWord}
+                                        title="Следующее слово"
+                                    />
+                                )}
+                            </FlexWrapper>
+                        </div>
+                    ) : (
+                        words.map((word, index) => (
+                            <S.TextWrapper key={index}>
+                                {isSwapped ? (
+                                    <>
+                                        <S.TargetWord>{word.target}</S.TargetWord>
+                                        <S.SourceWord>{word.source}</S.SourceWord>
+                                    </>
+                                ) : (
+                                    <>
+                                        <S.TargetWord>{word.source}</S.TargetWord>
+                                        <S.SourceWord>{word.target}</S.SourceWord>
+                                    </>
+                                )}
+                            </S.TextWrapper>
+                        ))
+                    )}
+                </Article>
+            )}
+
+            {/*{======= new =======}*/}
+            {mode !== "list" && (
+                <DisplayController
+                    words={displayWords}
+                    mode={mode === "display-settings" ? "settings" : "running"}
+                    config={displayConfig}
+                    onConfigChange={setDisplayConfig}
+                    onStart={() => setMode("display-running")}
+                    onBackToSettings={() => setMode("display-settings")}
+                    onExit={() => setMode("list")}
+                />
+            )}
+            {/*{======= new =======}*/}
         </WordsBlock>
     );
 };

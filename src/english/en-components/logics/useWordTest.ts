@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useWordTest = (word: { eng: string; rus: string }[]) => {
+export const useWordTest = (word: { source: string; target: string }[]) => {
     const [isSingleWordMode, setIsSingleWordMode] = useState(false);
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [inputValue, setInputValue] = useState('');
