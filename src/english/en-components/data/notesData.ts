@@ -10,7 +10,7 @@ export type NoteBlock =
 };
 
 // Ключи заметок
-export type NoteKey = 'general' | 'pastSimpleBasics' | 'irregularVerbsTable' | 'test';
+export type NoteKey = 'general' | 'pastSimpleBasics' | 'irregularVerbsTable' | 'randomOne' | 'test';
 
 // Описание одной заметки
 export type Note = {
@@ -589,6 +589,7 @@ export const notesData: Record<NoteKey, Note> = {
                     ['wear', 'wore', 'worn', 'носить'],
                     ['win', 'won', 'won', 'выигрывать'],
                     ['write', 'wrote', 'written', 'писать'],
+                    ['run', 'ran', 'run', 'бегать']
                 ],
             },
 
@@ -601,6 +602,155 @@ export const notesData: Record<NoteKey, Note> = {
                 type: 'p',
                 content:
                     'Get: got is standard in British English. Gotten is used in American English to show a result or state.',
+            },
+        ],
+    },
+
+    randomOne: {
+        title: 'Grammar & Usage (from screenshots)',
+        blocks: [
+            // =========================================================
+            // 1) Be crazy about / Guilty pleasure
+            // =========================================================
+            { type: 'h2', content: '1) Be crazy about / Guilty pleasure' },
+
+            {
+                type: 'p',
+                content:
+                    'Фраза “be crazy about …” означает “очень сильно любить / обожать / быть без ума от чего-то”. Это разговорная, естественная конструкция. По смыслу близко к “really love”, но звучит эмоциональнее.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'They are crazy about cheese. — Они обожают сыр.',
+                    'I’m crazy about this game. — Я без ума от этой игры.',
+                    'She’s crazy about travelling. — Она обожает путешествовать.',
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    '“Guilty pleasure” — это “виноватое удовольствие”: то, что тебе очень нравится, но за что немного стыдно (обычно еда, сериал, привычка). Часто используется как существительное: “This is my guilty pleasure.”',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Cheese is my guilty pleasure. — Сыр — моё guilty pleasure.',
+                    'Chocolate is his guilty pleasure. — Шоколад — его guilty pleasure.',
+                    'Watching reality shows is my guilty pleasure. — Смотреть реалити-шоу — моё guilty pleasure.',
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'Связка из твоего скрина: можно совместить обе идеи в одной мысли — “guilty pleasure: they are crazy about cheese” (их guilty pleasure — сыр, они его обожают).',
+            },
+
+            // =========================================================
+            // 2) SO — result / consequence
+            // =========================================================
+            { type: 'h2', content: '2) SO — результат / следствие' },
+
+            {
+                type: 'p',
+                content:
+                    '“So” — союз, который показывает результат или следствие. Логика такая: причина → so → результат.',
+            },
+            {
+                type: 'table',
+                headers: ['Формула', 'Пример', 'Перевод'],
+                rows: [
+                    [
+                        'Причина + so + результат',
+                        'I was very tired, so I went to bed early.',
+                        'Я был очень уставшим, поэтому рано лёг спать.',
+                    ],
+                    [
+                        'Причина + so + результат',
+                        'My office is near my house, so I walk to work.',
+                        'Мой офис рядом с домом, поэтому я хожу на работу пешком.',
+                    ],
+                    [
+                        'Причина + so + результат',
+                        "The kitchen is small, but there’s a table, so you can eat there.",
+                        'Кухня маленькая, но там есть стол, поэтому ты можешь там есть.',
+                    ],
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'Важно: “so” — это НЕ “так”. Это именно “поэтому / поэтому-то”. Если хочешь сказать “так” (образ действия), обычно нужно “like this / this way”.',
+            },
+
+            // =========================================================
+            // 3) There was / There were (Past of there is/are)
+            // =========================================================
+            { type: 'h2', content: '3) There was / There were — “там было / там были”' },
+
+            {
+                type: 'p',
+                content:
+                    '“There was / there were” — это прошедшее время от “there is / there are”. Используется, чтобы описывать наличие/отсутствие чего-то в прошлом (в комнате, городе, доме, истории).',
+            },
+            {
+                type: 'table',
+                headers: ['Когда', 'Форма', 'Примеры'],
+                rows: [
+                    [
+                        'Единственное число / неисчисляемое',
+                        'There was …',
+                        'There was a big mirror. / There was some milk.',
+                    ],
+                    [
+                        'Множественное число',
+                        'There were …',
+                        'There were four lamps. / There were many people.',
+                    ],
+                ],
+            },
+
+            { type: 'h2', content: '3.1) Утверждение / отрицание / вопрос' },
+
+            {
+                type: 'table',
+                headers: ['Тип', 'Singular', 'Plural'],
+                rows: [
+                    ['✅ Утверждение', 'There was a big mirror.', 'There were four lamps.'],
+                    ['❌ Отрицание', "There wasn’t a TV.", "There weren’t any ghosts."],
+                    ['❓ Вопрос', 'Was there a bathroom?', 'Were there any windows?'],
+                ],
+            },
+
+            {
+                type: 'p',
+                content:
+                    'Короткие ответы (как в твоём скрине):',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Was there a bathroom? — Yes, there was. / No, there wasn’t.',
+                    'Were there any windows? — Yes, there were. / No, there weren’t.',
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'Подсказка: если после “there …” стоит множественное число, почти всегда будет “were”. Если единственное — “was”.',
+            },
+
+            // =========================================================
+            // 4) Мини-блок на закрепление (коротко, но полезно)
+            // =========================================================
+            { type: 'h2', content: '4) Быстрые примеры для практики' },
+            {
+                type: 'ul',
+                items: [
+                    'I’m crazy about cheese, so I eat it every day. — Я обожаю сыр, поэтому ем его каждый день.',
+                    'There was a big mirror in the hall. — В коридоре было большое зеркало.',
+                    'There weren’t any windows in the room, so it was dark. — В комнате не было окон, поэтому было темно.',
+                ],
             },
         ],
     },

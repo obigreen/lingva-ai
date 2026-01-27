@@ -66,6 +66,7 @@ export const categoriesData = {
         {source: 'tidy', target: 'аккуратный, опрятный'},
         {source: 'untidy', target: 'неопрятный, в беспорядке'},
         {source: 'valuable', target: 'ценный'},
+        {source: 'composed', target: 'спокойный, собранный'}
     ],
     arrAdverbs: [
         {source: 'near', target: 'рядом'},
@@ -108,8 +109,8 @@ export const categoriesData = {
         {source: 'however', target: 'однако, тем не менее'},
         {source: 'unfortunately', target: 'к сожалению'},
         {source: 'rarely', target: 'редко'},
-        {source: 'probably', target: 'вероятно, возможно'}
-
+        {source: 'probably', target: 'вероятно, возможно'},
+        {source: 'suddenly', target: 'вдруг, внезапно'}
     ],
     arrConjunctionsAndParticle: [
         {source: 'so', target: 'так'},
@@ -264,7 +265,8 @@ export const categoriesData = {
         {source: 'decision', target: 'решение'},
         {source: 'value', target: 'ценность'},
         {source: 'central heating', target: 'центральное отопление'},
-        {source: 'ceiling', target: 'потолок'}
+        {source: 'ceiling', target: 'потолок'},
+        {source: 'taps', target: 'краны (водопроводные)'}
     ],
     arrPhrases: [
         {source: 'Me too', target: 'Я тоже'},
@@ -363,6 +365,7 @@ export const categoriesData = {
         {source: "Everything's fine!", target: 'Всё хорошо!'},
         {source: 'By the way', target: 'Кстати'},
         {source: 'put it into the box', target: 'положи это в коробку'},
+        {source: 'Be crazy about', target: 'очень сильно любить / обожать / быть без ума от чего-то'},
     ],
     arrPrepositions: [
         {source: 'for', target: 'для'},
@@ -533,7 +536,9 @@ export const categoriesData = {
         {source: 'tidy', target: 'прибирать'},
         {source: 'go', target: 'идти'},
         {source: 'arrange', target: 'организовывать, договариваться'},
-        {source: 'to promise', target: 'обещать'}
+        {source: 'to promise', target: 'обещать'},
+        {source: 'complained', target: 'жаловаться (прош. вр.)'},
+        {source: 'promise', target: 'обещать'}
     ],
     arrFromMyVideo: [
         {source: 'Listen', target: 'слушать'},
