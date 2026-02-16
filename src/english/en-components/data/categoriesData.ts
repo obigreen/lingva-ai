@@ -66,7 +66,10 @@ export const categoriesData = {
         {source: 'tidy', target: 'аккуратный, опрятный'},
         {source: 'untidy', target: 'неопрятный, в беспорядке'},
         {source: 'valuable', target: 'ценный'},
-        {source: 'composed', target: 'спокойный, собранный'}
+        {source: 'composed', target: 'спокойный, собранный'},
+        {source: 'fascinating', target: 'увлекательный, захватывающий'},
+        {source: 'addicted', target: 'зависимый (обычно: addicted to)'},
+        {source: 'convenient', target: 'удобный, подходящий'}
     ],
     arrAdverbs: [
         {source: 'near', target: 'рядом'},
@@ -110,7 +113,8 @@ export const categoriesData = {
         {source: 'unfortunately', target: 'к сожалению'},
         {source: 'rarely', target: 'редко'},
         {source: 'probably', target: 'вероятно, возможно'},
-        {source: 'suddenly', target: 'вдруг, внезапно'}
+        {source: 'suddenly', target: 'вдруг, внезапно'},
+        {source: 'easily', target: 'легко, без труда'}
     ],
     arrConjunctionsAndParticle: [
         {source: 'so', target: 'так'},
@@ -266,7 +270,15 @@ export const categoriesData = {
         {source: 'value', target: 'ценность'},
         {source: 'central heating', target: 'центральное отопление'},
         {source: 'ceiling', target: 'потолок'},
-        {source: 'taps', target: 'краны (водопроводные)'}
+        {source: 'taps', target: 'краны (водопроводные)'},
+        {source: 'guests', target: 'гости'},
+        {source: 'plot', target: 'сюжет'},
+        {source: 'influence', target: 'влияние'},
+        {source: 'legs', target: 'ноги'},
+        {source: 'a piece of news', target: 'новость'},
+        {source: 'takeaway', target: 'еда на вынос'},
+        {source: 'corn', target: 'кукуруза'},
+        {source: 'an ear of corn', target: 'початок кукурузы'}
     ],
     arrPhrases: [
         {source: 'Me too', target: 'Я тоже'},
@@ -366,6 +378,8 @@ export const categoriesData = {
         {source: 'By the way', target: 'Кстати'},
         {source: 'put it into the box', target: 'положи это в коробку'},
         {source: 'Be crazy about', target: 'очень сильно любить / обожать / быть без ума от чего-то'},
+        {source: 'for decades to come', target: 'на десятилетия вперёд'},
+        {source: 'Trick or treat', target: 'Сладость или гадость'},
     ],
     arrPrepositions: [
         {source: 'for', target: 'для'},
@@ -538,7 +552,13 @@ export const categoriesData = {
         {source: 'arrange', target: 'организовывать, договариваться'},
         {source: 'to promise', target: 'обещать'},
         {source: 'complained', target: 'жаловаться (прош. вр.)'},
-        {source: 'promise', target: 'обещать'}
+        {source: 'promise', target: 'обещать'},
+        {source: 'thought', target: 'думал (сот)'},
+        {source: 'appears', target: 'появляется'},
+        {source: 'appeared', target: 'появился'},
+        {source: 'disappear', target: 'исчезать'},
+        {source: 'invented', target: 'изобрёл, придумал'},
+        {source: 'to inspire', target: 'вдохновлять'}
     ],
     arrFromMyVideo: [
         {source: 'Listen', target: 'слушать'},
@@ -604,6 +624,4 @@ export const categoriesData = {
         {source: 'next to', target: 'рядом с, возле'},
     ]
 }
-
-
 
