@@ -10,7 +10,7 @@ export type NoteBlock =
 };
 
 // Ключи заметок
-export type NoteKey = 'general' | 'pastSimpleBasics' | 'irregularVerbsTable' | 'randomOne' | 'test';
+export type NoteKey = 'general' | 'pastSimpleBasics' | 'irregularVerbsTable' | 'randomOne' | 'coreGrammar' | 'test';
 
 // Описание одной заметки
 export type Note = {
@@ -750,6 +750,142 @@ export const notesData: Record<NoteKey, Note> = {
                     'I’m crazy about cheese, so I eat it every day. — Я обожаю сыр, поэтому ем его каждый день.',
                     'There was a big mirror in the hall. — В коридоре было большое зеркало.',
                     'There weren’t any windows in the room, so it was dark. — В комнате не было окон, поэтому было темно.',
+                ],
+            },
+        ],
+    },
+
+
+    coreGrammar: {
+        title: 'Have got, Place, Movement, Countable/Uncountable',
+        blocks: [
+            { type: 'h2', content: '1) Have got / Has got' },
+            {
+                type: 'p',
+                content:
+                    '"Have got" = "have" (иметь). Это разговорная форма, очень часто используется в британском английском.',
+            },
+            {
+                type: 'table',
+                headers: ['Утверждение', 'Отрицание', 'Вопрос'],
+                rows: [
+                    ['I have got', "I haven’t got", 'Have I got…?'],
+                    ['You have got', "You haven’t got", 'Have you got…?'],
+                    ['He/She/It has got', "He/She/It hasn’t got", 'Has he/she/it got…?'],
+                    ['We have got', "We haven’t got", 'Have we got…?'],
+                    ['They have got', "They haven’t got", 'Have they got…?'],
+                ],
+            },
+            {
+                type: 'ul',
+                items: [
+                    'I have got long dark hair.',
+                    'She has got straight blonde hair.',
+                    'I haven’t got straight hair.',
+                    'Has she got any talents?',
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'Важно: после have/has got НЕ используем do/does. ❌ Do you have got? → ✅ Have you got?',
+            },
+
+            { type: 'h2', content: '2) Place — предлоги места' },
+            {
+                type: 'table',
+                headers: ['Предлог', 'Транскрипция', 'Пример'],
+                rows: [
+                    ['in', '/ɪn/', 'in the wardrobe'],
+                    ['on', '/ɒn/', 'on the chair'],
+                    ['under', '/ˈʌndə/', 'under the bed'],
+                    ['behind', '/bɪˈhaɪnd/', 'behind the sofa'],
+                    ['between', '/bɪˈtwiːn/', 'between the windows'],
+                    ['next to', '/nekst tuː/', 'next to the armchair'],
+                    ['opposite', '/ˈɒpəzɪt/', 'opposite the woman'],
+                    ['over', '/ˈəʊvə/', 'over the mirror'],
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'between = между (между двумя объектами). На картинке призрак стоит между окнами.',
+            },
+
+            { type: 'h2', content: '3) Movement — предлоги движения' },
+            {
+                type: 'table',
+                headers: ['Предлог', 'Транскрипция', 'Пример'],
+                rows: [
+                    ['into', '/ˈɪntuː/', 'into the wardrobe'],
+                    ['out of', '/aʊt əv/', 'out of the wardrobe'],
+                    ['through', '/θruː/', 'through the window'],
+                    ['up', '/ʌp/', 'up the stairs'],
+                    ['down', '/daʊn/', 'down the stairs'],
+                    ['from … to …', '/frɒm … tuː/', 'from the bedroom to the bathroom'],
+                ],
+            },
+            {
+                type: 'p',
+                content:
+                    'through = через (движение сквозь что-то). На картинке призрак выпрыгивает through the window.',
+            },
+
+            { type: 'h2', content: '4) Countable / Uncountable nouns' },
+            {
+                type: 'p',
+                content:
+                    'Countable — можно посчитать (an apple, three apples). Uncountable — нельзя посчитать (rice, meat, sugar).',
+            },
+            {
+                type: 'table',
+                headers: ['Тип', 'Примеры'],
+                rows: [
+                    ['Countable', 'an apple, a tomato, oranges'],
+                    ['Uncountable', 'rice, meat, butter, sugar'],
+                ],
+            },
+            { type: 'h2', content: '4.1) a / an / some / any' },
+            {
+                type: 'table',
+                headers: ['Когда используем', 'Countable', 'Uncountable'],
+                rows: [
+                    ['Утверждение (+)', 'a tomato / some tomatoes', 'some rice'],
+                    ['Отрицание (-)', 'any tomatoes', 'any rice'],
+                    ['Вопрос (?)', 'any oranges?', 'any sugar?'],
+                ],
+            },
+            {
+                type: 'ul',
+                items: [
+                    'a/an — только с единственным countable.',
+                    'some — в утверждениях (и в вежливых вопросах).',
+                    'any — в отрицаниях и вопросах.',
+                    'Can I have some sugar? (предложение/просьба)',
+                ],
+            },
+
+            { type: 'h2', content: '5) Over vs Above' },
+            {
+                type: 'p',
+                content:
+                    'Оба слова означают "над", но используются немного по-разному.',
+            },
+            {
+                type: 'table',
+                headers: ['Over', 'Above'],
+                rows: [
+                    ['Есть движение или покрытие', 'Просто положение выше'],
+                    ['The ghost jumped over the table.', 'The clock is above the door.'],
+                    ['The plane flew over the city.', 'There’s a light above the mirror.'],
+                ],
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Over часто используется при движении.',
+                    'Above — статичное положение выше.',
+                    'Sometimes they can be similar, but movement = over.',
                 ],
             },
         ],

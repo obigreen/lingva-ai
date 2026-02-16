@@ -28,7 +28,8 @@ const notesNavItems = [
     {path: "/general", title: "General notes"},
     {path: "/pastSimpleBasics", title: "Past Simple & core verb patterns"},
     {path: "/irregularVerbsTable", title: "Irregular Verbs — reference table"},
-    {path: "/test", title: "Test"},
+    {path: "/core-grammar", title: "Core grammar"},
+    {path: "/test", title: "Test"}
 ];
 
 
@@ -124,10 +125,10 @@ export const English = () => {
                     key="pastSimpleBasics"
                     categoryKey={"pastSimpleBasics"}/>}/>
 
-                <Route path="test" element={<Notes
+                <Route path="core-grammar" element={<Notes
                     title={"Grammar notes"}
-                    key="test"
-                    categoryKey={"test"}/>}/>
+                    key="coreGrammar"
+                    categoryKey={"coreGrammar"}/>}/>
 
 
                 <Route path="irregularVerbsTable" element={<Notes
@@ -146,5 +147,4 @@ const Space = styled.div`
     width: 100%;
     height: 60px;
 `
-
 
