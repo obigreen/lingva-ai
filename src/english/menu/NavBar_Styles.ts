@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 const HeaderNav = styled.header`
     display: flex;
@@ -21,6 +22,10 @@ const Ul = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+
+    @media ${theme.media.mobile} {
+        gap: 8px;
+    }
 `
 
 const Li = styled.li`
@@ -36,6 +41,16 @@ const Li = styled.li`
         display: block;
         padding: 10px;
         font-size: 20px;
+    }
+
+    @media ${theme.media.mobile} {
+        border-radius: 8px;
+
+        a {
+            padding: 7px 9px;
+            font-size: 13px;
+            line-height: 1.2;
+        }
     }
 `
 

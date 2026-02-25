@@ -12,9 +12,8 @@ export type PropsType = {
 export const Button = ({onClick, title, iconId}: PropsType) => {
     return (
         <S.Button onClick={onClick}>
-            {iconId ? <Icon iconId={iconId} width="50" height="50" viewBox={"0 0 32 32"}/> : title}
+            {iconId ? <Icon iconId={iconId} width="32" height="32" viewBox={"0 0 32 32"}/> : title}
         </S.Button>
     );
 };
-
 

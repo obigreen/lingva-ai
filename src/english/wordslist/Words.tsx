@@ -21,6 +21,17 @@ type WordListProps = {
 type WordsMode = "list" | "display-settings" | "display-running";
 // ======= new
 
+const getAdaptiveScale = (value: string) => {
+    const length = value.trim().length;
+
+    if (length <= 10) return 1;
+    if (length <= 18) return 0.92;
+    if (length <= 30) return 0.82;
+    if (length <= 45) return 0.72;
+
+    return 0.62;
+};
+
 
 export const Words = ({categoryKey, title}: WordListProps) => {
 
@@ -79,6 +90,7 @@ export const Words = ({categoryKey, title}: WordListProps) => {
                         gap={'20px'}
                         margin={'0 0 20px 0'}
                         justify={'end'}
+                        wrap={'wrap'}
                         position={'relative'}
                     >
                         <Button onClick={toggleArray} iconId={'random'} />
@@ -89,9 +101,8 @@ export const Words = ({categoryKey, title}: WordListProps) => {
                         <WrappButton />
                         <Button onClick={toggleSwap} iconId={'arrows'} />
 
-                        {/* 🔥 DISPLAY MODE */}
                         <Button
-                            title="Display"
+                            iconId="displayMode"
                             onClick={() => setMode("display-settings")}
                         />
                     </FlexWrapper>
@@ -100,16 +111,16 @@ export const Words = ({categoryKey, title}: WordListProps) => {
                         <div>
                             <S.TextWrapper>
                                 {isSwapped ? (
-                                    <S.TargetWord>{currentWord.source}</S.TargetWord>
+                                    <S.TargetWord $scale={getAdaptiveScale(currentWord.source)}>{currentWord.source}</S.TargetWord>
                                 ) : (
-                                    <S.TargetWord>{currentWord.target}</S.TargetWord>
+                                    <S.TargetWord $scale={getAdaptiveScale(currentWord.target)}>{currentWord.target}</S.TargetWord>
                                 )}
 
                                 {isCorrect ? (
                                     isSwapped ? (
-                                        <S.SourceWord>{currentWord.target}</S.SourceWord>
+                                        <S.SourceWord $scale={getAdaptiveScale(currentWord.target)}>{currentWord.target}</S.SourceWord>
                                     ) : (
-                                        <S.SourceWord>{currentWord.source}</S.SourceWord>
+                                        <S.SourceWord $scale={getAdaptiveScale(currentWord.source)}>{currentWord.source}</S.SourceWord>
                                     )
                                 ) : (
                                     <S.Input
@@ -141,13 +152,13 @@ export const Words = ({categoryKey, title}: WordListProps) => {
                             <S.TextWrapper key={index}>
                                 {isSwapped ? (
                                     <>
-                                        <S.TargetWord>{word.target}</S.TargetWord>
-                                        <S.SourceWord>{word.source}</S.SourceWord>
+                                        <S.TargetWord $scale={getAdaptiveScale(word.target)}>{word.target}</S.TargetWord>
+                                        <S.SourceWord $scale={getAdaptiveScale(word.source)}>{word.source}</S.SourceWord>
                                     </>
                                 ) : (
                                     <>
-                                        <S.TargetWord>{word.source}</S.TargetWord>
-                                        <S.SourceWord>{word.target}</S.SourceWord>
+                                        <S.TargetWord $scale={getAdaptiveScale(word.source)}>{word.source}</S.TargetWord>
+                                        <S.SourceWord $scale={getAdaptiveScale(word.target)}>{word.target}</S.SourceWord>
                                     </>
                                 )}
                             </S.TextWrapper>

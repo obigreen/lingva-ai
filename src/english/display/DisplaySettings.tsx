@@ -54,10 +54,11 @@ export const DisplaySettings = (
                 gap={'20px'}
                 margin={'0 0 20px 0'}
                 justify={'end'}
+                wrap={'wrap'}
                 position={'relative'}
             >
                 <Button iconId={"back"} onClick={onBack}/>
-                <Button title="Start" onClick={onStart}/>
+                <Button iconId={"startMode"} onClick={onStart}/>
 
             </FlexWrapper>
 
