@@ -74,6 +74,14 @@
             </defs>
         </svg>
     </g>
+    <g id="displayMode">
+        <rect x="4" y="7" width="24" height="18" rx="3" stroke="#FBFBFB" stroke-width="2"/>
+        <path d="M12 12L21 16L12 20V12Z" fill="#FBFBFB"/>
+    </g>
+    <g id="startMode">
+        <circle cx="16" cy="16" r="12" stroke="#FBFBFB" stroke-width="2"/>
+        <path d="M13 10.5L22 16L13 21.5V10.5Z" fill="#FBFBFB"/>
+    </g>
 
 
     <!--socials-->
