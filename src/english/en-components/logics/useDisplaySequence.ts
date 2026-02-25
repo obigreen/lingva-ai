@@ -1,6 +1,7 @@
 import {useCallback, useEffect, useRef, useState} from "react";
 import {DisplayStatus, DisplayStep, DisplayWord} from "../../display/DisplayController";
 import {DisplayConfig} from "../../display/DisplaySettings";
+import {shuffleArray} from "./useToggleArray";
 
 
 
@@ -30,6 +31,7 @@ export const useDisplaySequence = (
     const indexRef = useRef(0);
     const timeoutRef = useRef<number | null>(null);
     const wordsRef = useRef<DisplayWord[]>(words);
+    const runWordsRef = useRef<DisplayWord[]>(words);
     const configRef = useRef<DisplayConfig>(config);
 
     useEffect(() => {
@@ -56,7 +58,7 @@ export const useDisplaySequence = (
     }, [clearTimer]);
 
     const nextWord = useCallback(() => {
-        const list = wordsRef.current;
+        const list = runWordsRef.current;
 
         if (list.length === 0) {
             stop();
@@ -75,6 +77,11 @@ export const useDisplaySequence = (
 
     const start = useCallback(() => {
         if (wordsRef.current.length === 0) return;
+
+        const baseWords = wordsRef.current;
+        runWordsRef.current = configRef.current.random
+            ? shuffleArray(baseWords)
+            : baseWords;
 
         clearTimer();
         setStatus("running");

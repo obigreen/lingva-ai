@@ -69,7 +69,8 @@ export const categoriesData = {
         {source: 'composed', target: 'спокойный, собранный'},
         {source: 'fascinating', target: 'увлекательный, захватывающий'},
         {source: 'addicted', target: 'зависимый (обычно: addicted to)'},
-        {source: 'convenient', target: 'удобный, подходящий'}
+        {source: 'convenient', target: 'удобный, подходящий'},
+        {source: 'bright', target: 'яркий; светлый (иногда: способный/умный)'}
     ],
     arrAdverbs: [
         {source: 'near', target: 'рядом'},
@@ -114,7 +115,8 @@ export const categoriesData = {
         {source: 'rarely', target: 'редко'},
         {source: 'probably', target: 'вероятно, возможно'},
         {source: 'suddenly', target: 'вдруг, внезапно'},
-        {source: 'easily', target: 'легко, без труда'}
+        {source: 'easily', target: 'легко, без труда'},
+        {source: 'basically', target: 'в основном; по сути'}
     ],
     arrConjunctionsAndParticle: [
         {source: 'so', target: 'так'},
@@ -278,7 +280,11 @@ export const categoriesData = {
         {source: 'a piece of news', target: 'новость'},
         {source: 'takeaway', target: 'еда на вынос'},
         {source: 'corn', target: 'кукуруза'},
-        {source: 'an ear of corn', target: 'початок кукурузы'}
+        {source: 'an ear of corn', target: 'початок кукурузы'},
+        {source: 'occasion', target: 'случай, повод; (также) мероприятие/событие'},
+        {source: 'mashed potatoes', target: 'картофельное пюре'},
+        {source: 'baked potatoes', target: 'запечённый картофель / печёная картошка'},
+        {source: 'whole grain bread', target: 'цельнозерновой хлеб'}
     ],
     arrPhrases: [
         {source: 'Me too', target: 'Я тоже'},
@@ -380,6 +386,7 @@ export const categoriesData = {
         {source: 'Be crazy about', target: 'очень сильно любить / обожать / быть без ума от чего-то'},
         {source: 'for decades to come', target: 'на десятилетия вперёд'},
         {source: 'Trick or treat', target: 'Сладость или гадость'},
+        {source: 'ways of preparing', target: 'способы приготовления'},
     ],
     arrPrepositions: [
         {source: 'for', target: 'для'},
@@ -613,6 +620,23 @@ export const categoriesData = {
         {source: 'With each video', target: 'с каждым видео'}
 
     ],
+    arrBigBangTheory: [
+        {source: 'Son of a bitch!', target: 'Сукин сын! Мерзавец!'},
+        {source: 'You sick, geeky bastards!', target: 'Вы больные, чокнутые ублюдки!'},
+        {source: 'What is wrong with you?', target: 'Что с тобой не так?'},
+        {source: "Hey, what's going on?", target: 'Эй, что происходит?'},
+        {source: "You don't hunt, do you?", target: 'Ты не охотишься, правда?'},
+        {source: 'I admire your fingering.', target: 'Я восхищаюсь твоей техникой игры пальцами'},
+        {source: 'Maybe sometime you can try that on my instrument.', target: 'Может быть, как-нибудь ты сможешь попробовать это на моем инструменте'},
+        {source: 'Get the kid in the yarmulke! Get the kid in the yarmulke!', target: 'Поймайте парня в ермолке! Поймайте парня в ермолке!'},
+        {source: "That's right, you saw what you saw.", target: 'Верно, ты видел то, что видел'},
+        {source: "That's how we roll in the Shire.", target: 'Так мы делаем в Шире'},
+        {source: 'Will see', target: 'Посмотрим'},
+        {source: 'Here we go', target: 'Ну вот, начали || Поехали'},
+        {source: 'Get over', target: 'Забудь'},
+        {source: "I don't mind", target: 'Я не против (mind - разум)'},
+        {source: 'Holy crap(shit) on a cracker', target: 'Святое дерьмо(не shit) на крекере'},
+    ],
     arrDirections: [
         {source: 'opposite', target: 'напротив'},
         {source: 'between', target: 'между'},
@@ -624,4 +648,3 @@ export const categoriesData = {
         {source: 'next to', target: 'рядом с, возле'},
     ]
 }
-

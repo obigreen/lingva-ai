@@ -3,8 +3,6 @@ import React from 'react';
 import {NavBar} from "./menu/NavBar";
 import {Words} from "./wordslist/Words";
 import {Navigate, Route, Routes} from "react-router-dom";
-import styled from "styled-components";
-import {Notes} from "./notelist/Notes";
 
 
 const wordCategories = [
@@ -20,16 +18,8 @@ const wordCategories = [
     {path: "/day-and-time", title: "Day and Time"},
     {path: "/programming-translate", title: "Programming Language"},
     {path: "/from-video", title: "From video"},
+    {path: "/big-bang-theory", title: "Big Bang Theory"},
     {path: "/directions", title: "Directions"}
-];
-
-
-const notesNavItems = [
-    {path: "/general", title: "General notes"},
-    {path: "/pastSimpleBasics", title: "Past Simple & core verb patterns"},
-    {path: "/irregularVerbsTable", title: "Irregular Verbs — reference table"},
-    {path: "/core-grammar", title: "Core grammar"},
-    {path: "/test", title: "Test"}
 ];
 
 
@@ -101,50 +91,17 @@ export const English = () => {
                            title={'From video'}
                            key="arrFromMyVideo"
                            categoryKey="arrFromMyVideo"/>}/>
+                <Route path="big-bang-theory"
+                       element={<Words
+                           title={'Big Bang Theory'}
+                           key="arrBigBangTheory"
+                           categoryKey="arrBigBangTheory"/>}/>
                 <Route path="directions"
                        element={<Words
                            title={'Directions'}
                            key="arrDirections"
                            categoryKey="arrDirections"/>}/>
             </Routes>
-
-
-            <Space/>
-
-
-            <NavBar items={notesNavItems}/>
-            <Routes>
-                <Route path="general" element={<Notes
-                    title={"General notes"}
-                    key="general"
-                    categoryKey={"general"}
-                />}/>
-
-                <Route path="pastSimpleBasics" element={<Notes
-                    title={"Past Simple & core verb patterns"}
-                    key="pastSimpleBasics"
-                    categoryKey={"pastSimpleBasics"}/>}/>
-
-                <Route path="core-grammar" element={<Notes
-                    title={"Grammar notes"}
-                    key="coreGrammar"
-                    categoryKey={"coreGrammar"}/>}/>
-
-
-                <Route path="irregularVerbsTable" element={<Notes
-                    title={"Irregular Verbs — reference table"}
-                    key="irregularVerbsTable"
-                    categoryKey={"irregularVerbsTable"}/>}/>
-
-            </Routes>
-
         </>
     );
 };
-
-
-const Space = styled.div`
-    width: 100%;
-    height: 60px;
-`
-
